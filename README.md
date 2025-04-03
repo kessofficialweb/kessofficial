@@ -43,11 +43,11 @@ Official website for the Engineering Students Society at Kabale University. Buil
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/nexus-engineering.git
+   git clone https://github.com/kess0fficial/kess0fficial/commits?author=kess0fficial
    ```
 2. Open in browser:
    ```bash
-   cd nexus-engineering
+   cd kess0fficial
    open index.html
    ```
 
