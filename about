@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang=”en”>
+<head>
+    <!-- Same head content as index.html -->
+    <title>About Us | Nexus Engineering</title>
+    <!-- Keep same <style> block -->
+</head>
+<body>
+    <header class=”header”>
+        <nav class=”nav”>
+            <a href=”index.html” class=”logo”>Nexus</a>
+            <div class=”nav-links”>
+                <a href=”about.html” class=”active”>About</a>
+                <a href=”events.html”>Events</a>
+                <a href=”projects.html”>Projects</a>
+                <a href=”contact.html”>Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class=”hero”>
+        <h1 class=”hero-title”>Shaping the Future of Engineering</h1>
+        <p>Discover our mission, values, and the team driving innovation</p>
+    </section>
+
+    <div class=”cards” style=”max-width: 1000px; margin: 4rem auto;”>
+        <div class=”card”>
+            <h3>Our Mission</h3>
+            <p>To bridge theoretical knowledge with practical engineering solutions through collaborative innovation.</p>
+        </div>
+        <div class=”card”>
+            <h3>Core Values</h3>
+            <p>Innovation • Integrity • Collaboration • Sustainability • Excellence</p>
+        </div>
+    </div>
+
+    <section class=”team”>
+        <div class=”cards” style=”max-width: 1200px;”>
+            <div class=”card”>
+                <img src=”https://via.placeholder.com/400x300” alt=”Team Lead” style=”border-radius: 8px; margin-bottom: 1rem;”>
+                <h3>Dr. Emily Chen</h3>
+                <p>Faculty Advisor • Mechanical Engineering</p>
+            </div>
+            <!-- Repeat for other team members -->
+        </div>
+    </section>
+
+    <!-- Same footer as index.html -->
+</body>
+</html>
