@@ -1,204 +1,258 @@
 
-
-<!---
-kess0fficial/kess0fficial is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang=”en”>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tech Innovators Engineering Club</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Orbitron:wght@500&display=swap" rel="stylesheet">
+    <meta charset=”UTF-8”>
+    <meta name=”viewport” content=”width=device-width, initial-scale=1.0”>
+    <title>Nexus Engineering Collective</title>
+    <link href=”https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap” rel=”stylesheet”>
     <style>
         :root {
-            --primary-blue: #2A5C82;
-            --accent-teal: #2EC4B6;
-            --energy-orange: #FF9F1C;
-            --light-bg: #F8F9FA;
-            --dark-text: #2B2D42;
+            --gradient-1: #f3f4f6;
+            --gradient-2: #e5e7eb;
+            --primary: #1e40af;
+            --accent: #3b82f6;
+            --text: #1f2937;
+            --text-light: #6b7280;
         }
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Roboto', sans-serif;
         }
         body {
+            font-family: ‘Inter’, sans-serif;
+            color: var(--text);
             line-height: 1.6;
-            color: var(--dark-text);
+            background: linear-gradient(160deg, var(--gradient-1) 0%, var(--gradient-2) 100%);
+            min-height: 100vh;
         }
-      /* Header Styles */
+        /* Header */
         header {
-            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-teal) 100%);
-            padding: 1rem 2rem;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: sticky;
+            padding: 1.5rem 5%;
+            position: fixed;
+            width: 100%;
             top: 0;
-            z-index: 100;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         }
         nav {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-      .logo {
-            font-family: 'Orbitron', sans-serif;
-            color: white;
+        .logo {
+            font-family: ‘Playfair Display’, serif;
+            font-weight: 700;
             font-size: 1.8rem;
+            color: var(--primary);
             text-decoration: none;
+            letter-spacing: -0.5px;
         }
         .nav-links {
             display: flex;
-            gap: 2rem;
+            gap: 2.5rem;
+            align-items: center;
         }
         .nav-links a {
-            color: white;
             text-decoration: none;
+            color: var(--text);
             font-weight: 500;
-            transition: color 0.3s;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        .nav-links a::after {
+            content: ‘’;
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s ease;
+        }
+        .nav-links a:hover::after {
+            width: 100%;
         }
         /* Hero Section */
         .hero {
-            background: linear-gradient(45deg, var(--primary-blue), var(--accent-teal));
-            color: white;
-            padding: 6rem 2rem;
+            padding: 15vh 5% 8rem;
+            max-width: 1400px;
+            margin: 0 auto;
             text-align: center;
         }
         .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-            font-family: 'Orbitron', sans-serif;
+            font-family: ‘Playfair Display’, serif;
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 2rem;
+            color: var(--primary);
+            letter-spacing: -1.5px;
         }
-        /* Main Content Sections */
-        .section {
-            padding: 4rem 2rem;
-            max-width: 1200px;
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto 3rem;
+        }
+        /* Cards Section */
+        .features {
+            padding: 4rem 5%;
+            max-width: 1400px;
             margin: 0 auto;
         }
-        .section h2 {
-            font-family: 'Orbitron', sans-serif;
-            color: var(--primary-blue);
-            margin-bottom: 2rem;
-            font-size: 2.5rem;
-        }
-        /* Events Grid */
-        .events-grid {
+        .cards-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             margin-top: 2rem;
         }
-        .event-card {
+        .card {
             background: white;
-            border-radius: 10px;
-            padding: 2rem;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
+            border-radius: 12px;
+            padding: 2.5rem;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.03);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        /* Contact Form */
-        .contact-form {
-            max-width: 600px;
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+        }
+        .card h3 {
+            font-family: ‘Playfair Display’, serif;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        .card p {
+            color: var(--text-light);
+            font-size: 1rem;
+        }
+        /* Contact Section */
+        .contact {
+            padding: 6rem 5%;
+            max-width: 800px;
             margin: 0 auto;
+        }
+        .contact h2 {
+            font-family: ‘Playfair Display’, serif;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary);
+        }
+        .contact-form {
+            background: white;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.03);
         }
         .form-group {
             margin-bottom: 1.5rem;
         }
         input, textarea {
             width: 100%;
-            padding: 0.8rem;
-            border: 2px solid #ddd;
-            border-radius: 5px;
+            padding: 1rem;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
             font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--accent);
         }
         button {
-            background: var(--energy-orange);
+            background: var(--primary);
             color: white;
-            padding: 1rem 2rem;
+            padding: 1rem 2.5rem;
             border: none;
-            border-radius: 5px;
+            border-radius: 8px;
+            font-size: 1rem;
             cursor: pointer;
-            font-size: 1.1rem;
-            transition: background 0.3s;
+            transition: background 0.3s ease;
+            width: 100%;
+        }
+        button:hover {
+            background: var(--accent);
         }
         /* Footer */
         footer {
-            background: var(--dark-text);
-            color: white;
-            padding: 2rem;
+            padding: 3rem 5%;
             text-align: center;
-            margin-top: 4rem;
+            color: var(--text-light);
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+            margin-top: 6rem;
         }
         @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }        
             .nav-links {
                 display: none;
-            }       
-          .hero h1 {
-                font-size: 2.5rem;
             }
         }
-  </style>
+    </style>
 </head>
 <body>
     <header>
         <nav>
-            <a href="#" class="logo">TechInnovators</a>
-            <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#events">Events</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
+            <a href=”#” class=”logo”>Nexus</a>
+            <div class=”nav-links”>
+                <a href=”#about”>About</a>
+                <a href=”#events”>Events</a>
+                <a href=”#projects”>Projects</a>
+                <a href=”#contact”>Contact</a>
             </div>
         </nav>
     </header>
-
-  <section class="hero">
-        <h1>Engineering Tomorrow's Solutions</h1>
-        <p>Join our community of innovators and problem solvers</p>
+    <section class=”hero”>
+        <h1>Engineering Excellence Through Collaboration</h1>
+        <p>Pushing boundaries in technological innovation through interdisciplinary research and development</p>
     </section>
-
-  <section id="about" class="section">
-        <h2>About Us</h2>
-        <p>We are a student-led engineering collective focused on practical innovation and technological advancement. Our mission is to bridge classroom learning with real-world engineering challenges.</p>
-    </section>
-
-  <section id="events" class="section">
-        <h2>Upcoming Events</h2>
-        <div class="events-grid">
-            <div class="event-card">
-                <h3>Robotics Workshop</h3>
-                <p>March 15 | Engineering Lab 3B</p>
+    <section class=”features”>
+        <div class=”cards-container”>
+            <div class=”card”>
+                <h3>Technical Workshops</h3>
+                <p>Hands-on sessions led by industry experts covering cutting-edge technologies and methodologies.</p>
             </div>
-            <div class="event-card">
-                <h3>CAD Design Challenge</h3>
-                <p>March 22 | Virtual Event</p>
+            <div class=”card”>
+                <h3>Research Initiatives</h3>
+                <p>Collaborative projects addressing real-world engineering challenges with academic and industry partners.</p>
+            </div>
+            <div class=”card”>
+                <h3>Competition Teams</h3>
+                <p>Participate in national and international engineering competitions with full institutional support.</p>
             </div>
         </div>
     </section>
-
-  <section id="contact" class="section">
-        <h2>Get Involved</h2>
-        <form class="contact-form">
-            <div class="form-group">
-                <input type="text" placeholder="Your Name" required>
-            </div>
-            <div class="form-group">
-                <input type="email" placeholder="Your Email" required>
-            </div>
-            <div class="form-group">
-                <textarea rows="5" placeholder="Your Message" required></textarea>
-            </div>
-            <button type="submit">Send Message</button>
-        </form>
+    <section class=”contact”>
+        <h2>Join Our Community</h2>
+        <div class=”contact-form”>
+            <form>
+                <div class=”form-group”>
+                    <input type=”text” placeholder=”Full Name” required>
+                </div>
+                <div class=”form-group”>
+                    <input type=”email” placeholder=”Email Address” required>
+                </div>
+                <div class=”form-group”>
+                    <textarea rows=”5” placeholder=”Your Message” required></textarea>
+                </div>
+                <button type=”submit”>Submit Application</button>
+            </form>
+        </div>
     </section>
-
-  <footer>
-        <p>&copy; 2024 Tech Innovators Engineering Club</p>
-        <p>Follow us on [Social Media Links]</p>
+    <footer>
+        <p>&copy; 2024 Nexus Engineering Collective. All rights reserved.</p>
+        <p style=”margin-top: 1rem;”>Designed with precision in Silicon Valley</p>
     </footer>
 </body>
 </html>
+
+
+
