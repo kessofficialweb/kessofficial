@@ -1,4 +1,4 @@
-
+html
 <!DOCTYPE html>
 <html lang=”en”>
 <head>
@@ -8,12 +8,12 @@
     <link href=”https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap” rel=”stylesheet”>
     <style>
         :root {
-            --gradient-1: #f3f4f7;
-            --gradient-2: #e5e7eb;
-            --primary: #1e40af;
-            --accent: #3b82f6;
-            --text: #1f2937;
-            --text-light: #6b7280;
+            --gradient-1: #f8f9fa;
+            --gradient-2: #e9ecef;
+            --primary: #2b2d42;
+            --accent: #ef233c;
+            --text: #2b2d42;
+            --text-light: #6c757d;
         }
         * {
             margin: 0;
@@ -27,13 +27,12 @@
             background: linear-gradient(160deg, var(--gradient-1) 0%, var(--gradient-2) 100%);
             min-height: 100vh;
         }
-        /* Header */
         header {
             padding: 1.5rem 5%;
             position: fixed;
             width: 100%;
             top: 0;
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
             z-index: 1000;
             border-bottom: 1px solid rgba(0, 0, 0, 0.05);
@@ -78,7 +77,6 @@
         .nav-links a:hover::after {
             width: 100%;
         }
-        /* Hero Section */
         .hero {
             padding: 15vh 5% 8rem;
             max-width: 1400px;
@@ -99,7 +97,6 @@
             max-width: 700px;
             margin: 0 auto 3rem;
         }
-        /* Cards Section */
         .features {
             padding: 4rem 5%;
             max-width: 1400px;
@@ -132,7 +129,6 @@
             color: var(--text-light);
             font-size: 1rem;
         }
-        /* Contact Section */
         .contact {
             padding: 6rem 5%;
             max-width: 800px;
@@ -180,7 +176,6 @@
         button:hover {
             background: var(--accent);
         }
-        /* Footer */
         footer {
             padding: 3rem 5%;
             text-align: center;
@@ -191,7 +186,7 @@
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2.5rem;
-            }        
+            }            
             .nav-links {
                 display: none;
             }
@@ -253,6 +248,3 @@
     </footer>
 </body>
 </html>
-
-
-
