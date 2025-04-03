@@ -8,7 +8,7 @@
     <link href=”https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap” rel=”stylesheet”>
     <style>
         :root {
-            --gradient-1: #f3f4f6;
+            --gradient-1: #f3f4f7;
             --gradient-2: #e5e7eb;
             --primary: #1e40af;
             --accent: #3b82f6;
