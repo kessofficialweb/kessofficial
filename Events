@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang=”en”>
+<head>
+    <title>Events | Nexus Engineering</title>
+    <!-- Same style -->
+</head>
+<body>
+    <header class=”header”>
+        <!-- Same navigation -->
+    </header>
+
+    <section class=”hero”>
+        <h1 class=”hero-title”>Upcoming Events</h1>
+        <p>Join our technical workshops, competitions, and networking events</p>
+    </section>
+
+    <div class=”cards” style=”max-width: 1200px;”>
+        <div class=”card”>
+            <div class=”event-date”>MAR 15</div>
+            <h3>Robotics Workshop</h3>
+            <p class=”event-details”>
+                <span class=”event-time”>10:00 AM - 4:00 PM</span>
+                <span class=”event-location”>Engineering Lab 3B</span>
+            </p>
+            <button class=”btn”>RSVP Now</button>
+        </div>
+        
+        <div class=”card”>
+            <div class=”event-date”>APR 2</div>
+            <h3>CAD Design Challenge</h3>
+            <p class=”event-details”>
+                <span class=”event-time”>2:00 PM - 5:00 PM</span>
+                <span class=”event-location”>Virtual Event</span>
+            </p>
+            <button class=”btn”>RSVP Now</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+</body>
+</html>
