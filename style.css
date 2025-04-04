@@ -218,3 +218,20 @@ input, textarea, select {
         border-bottom: 1px solid var(--neutral);
     }
 }
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .footer-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+}
