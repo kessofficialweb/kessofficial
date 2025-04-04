@@ -1,165 +1,170 @@
-<head>    
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects | KESS</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary: #2B2D42;
-            --accent: #EF233C;
-            --neutral: #EDF2F4;
-            --text: #2B2D42;
+        /* Enhanced Project Styles */
+        .project-card {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+
+        .project-image {
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px 8px 0 0;
         }
-        body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            color: var(--text);
-            background: linear-gradient(150deg, #ffffff 0%, #f8f9fa 100%);
+
+        .project-status {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            background: var(--accent);
+            color: white;
         }
-        /* Header */
-        .header {
-            padding: 1.5rem;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(8px);
-            z-index: 1000;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+        .tech-stack {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin: 1rem 0;
         }
-        .nav {
-            max-width: 1200px;
-            margin: 0 auto;
+
+        .tech-tag {
+            background: var(--neutral);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .project-meta {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin-top: 1rem;
+            color: var(--text-light);
         }
-        .logo {
-            font-family: 'Libre Baskerville', serif;
-            font-size: 1.8rem;
-            color: var(--primary);
-            text-decoration: none;
-        }
-        /* Hero Section */
-        .hero {
-            padding: 12rem 2rem 6rem;
+
+        /* Project Filters */
+        .project-filters {
             max-width: 1200px;
-            margin: 0 auto;
-            text-align: center;
+            margin: 2rem auto;
+            padding: 0 2rem;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
         }
-        .hero-title {
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.1;
-            color: var(--primary);
+
+        .filter-btn {
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            border: 2px solid var(--primary);
+            background: transparent;
+            cursor: pointer;
+            transition: all 0.3s ease;
         }
-        /* Cards */
-        .cards {
+
+        .filter-btn.active {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Project Timeline */
+        .timeline-container {
             max-width: 1200px;
             margin: 4rem auto;
             padding: 0 2rem;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        .card {
-            background: white;
-            border-radius: 12px;
-            padding: 2rem;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-        }
-        /* Contact Form */
-        .contact {
-            max-width: 800px;
-            margin: 6rem auto;
-            padding: 0 2rem;
-        }
-        .form {
-            background: white;
-            padding: 3rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-        }
-        input, textarea {
-            width: 100%;
-            padding: 1rem;
-            margin-bottom: 1.5rem;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            font-size: 1rem;
-        }
-        .btn {
-            background: var(--primary);
-            color: white;
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-        .btn:hover {
-            background: var(--accent);
-        }
-        /* Footer */
-        .footer {
-            text-align: center;
-            padding: 3rem;
-            color: #666;
-            border-top: 1px solid #eee;
-        }
-        @media (max-width: 768px) {
-            .hero-title {
-                font-size: 2.5rem;
-            }
         }
     </style>
 </head>
 <body>
-    <header class=”header”>
+    <header class="header">
         <nav class="nav">
-            <a href="index" class="logo"> KESS</a>
+            <a href="index" class="logo">KESS</a>
             <div class="nav-links">
                 <a href="about">About</a>
-                <a href="Events">Events</a>
-                <a href=”projects.html”>Projects</a>
+                <a href="events">Events</a>
+                <a href="projects" class="active">Projects</a>
                 <a href="contact">Contact</a>
             </div>
         </nav>
     </header>
-	
-	    <section class=”hero”>
-	        <h1 class=”hero-title”>Featured Projects</h1>
-	        <p>Explore our groundbreaking engineering initiatives</p>
-	    </section>
-	
-	    <div class=”cards” style=”max-width: 1400px;”>
-	        <div class=”card”>
-	            <img src=”https://via.placeholder.com/600x400” alt=”Solar Drone” style=”border-radius: 8px;”>
-	            <h3>Autonomous Solar Drone</h3>
-	            <p>Renewable energy-powered surveillance system</p>
-	            <div class=”tech-stack”>
-	                <span class=”tech-tag”>CAD</span>
-	                <span class=”tech-tag”>Python</span>
-	                <span class=”tech-tag”>IoT</span>
-	            </div>
-	        </div>
-	        
-	        <!-- More project cards -->
-	    </div>
-	
-	    <footer class="footer">
-    	  	  <p>© 2025 Kabale University Engineering Students Society (KESS) </p>
-	    </footer>
-	<script src="scripts.js"></script>
+
+    <section class="hero">
+        <h1 class="hero-title">Featured Projects</h1>
+        <p>Explore our groundbreaking engineering initiatives</p>
+        <div class="project-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="software">Software</button>
+            <button class="filter-btn" data-filter="hardware">Hardware</button>
+            <button class="filter-btn" data-filter="research">Research</button>
+        </div>
+    </section>
+
+    <div class="cards">
+        <div class="card project-card" data-category="hardware">
+            <span class="project-status">Ongoing</span>
+            <img src="https://via.placeholder.com/600x400" alt="Solar Drone" class="project-image">
+            <div class="project-content">
+                <h3>Autonomous Solar Drone</h3>
+                <div class="project-meta">
+                    <span>🕒 6 Month Project</span>
+                    <span>👥 8 Members</span>
+                </div>
+                <p>Renewable energy-powered surveillance system with AI-based navigation</p>
+                <div class="tech-stack">
+                    <span class="tech-tag">CAD</span>
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">IoT</span>
+                    <span class="tech-tag">Solar Tech</span>
+                </div>
+                <button class="btn">Learn More</button>
+            </div>
+        </div>
+
+        <div class="card project-card" data-category="software">
+            <span class="project-status">Completed</span>
+            <img src="https://via.placeholder.com/600x400" alt="AI System" class="project-image">
+            <div class="project-content">
+                <h3>Smart Campus AI</h3>
+                <div class="project-meta">
+                    <span>🕒 4 Month Project</span>
+                    <span>👥 5 Members</span>
+                </div>
+                <p>AI-powered campus management system with predictive analytics</p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">TensorFlow</span>
+                    <span class="tech-tag">AWS</span>
+                </div>
+                <button class="btn">View Demo</button>
+            </div>
+        </div>
+    </div>
+
+    <section class="timeline-container">
+        <h2 class="section-title">Project Timeline</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-date">Q1 2024</div>
+                <h3>New Project Incubation</h3>
+                <p>Accepting proposals for new engineering initiatives</p>
+            </div>
+            <!-- Add more timeline items -->
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2025 Kabale University Engineering Students Society (KESS)</p>
+    </footer>
+    <script src="scripts.js"></script>
 </body>
 </html>
