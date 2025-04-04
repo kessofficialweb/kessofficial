@@ -98,16 +98,25 @@
     <header class="header">
         <nav class="nav">
             <a href="index" class="logo">KESS</a>
-            <div class="nav-links">
-                <a href="about">About</a>
-                <a href="events">Events</a>
+    
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu-btn">☰</button>
+
+    <!-- Navigation Links with Dropdown -->
+    <div class="nav-links">
+        <a href="about">About</a>
+        <a href="events">Events</a>
+        <div class="dropdown">
+            <button class="dropbtn">More ▼</button>
+            <div class="dropdown-content">
                 <a href="projects">Projects</a>
-                <a href="contact">Contact</a>
-                <div class="search-bar">
-                    <input type="text" class="search-input" placeholder="Search...">
-                    <button class="btn">Search</button>
-                </div>
+                <a href="gallery">Gallery</a>
+                <a href="resources">Resources</a>
+                <a href="members">Members</a>
             </div>
+        </div>
+        <a href="contact">Contact</a>
+    </div>
         </nav>
         <!--nav class="nav">
             <!--a href=”index” class=”logo”>KESS</a-->
