@@ -69,6 +69,45 @@ body {
     color: var(--accent);
 }
 
+
+
+/* Add these mobile-first styles */
+@media (max-width: 768px) {
+    .cards, .event-filters, .project-filters {
+        padding: 0 1rem;
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 8rem 1rem 2rem;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .team-grid, .partners-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-group {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
 /* Mobile Navigation */
 .hamburger {
     display: none;
@@ -96,6 +135,20 @@ body {
 /* Dropdown Styles */
 .dropdown {
     position: relative;
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+@media (max-width: 768px) {
+    .dropdown-menu {
+        position: static;
+        display: none;
+        box-shadow: none;
+        padding-left: 1rem;
+    }
+    .dropdown.active .dropdown-menu {
+        display: block;
+    }
 }
 
 .dropdown-content {
