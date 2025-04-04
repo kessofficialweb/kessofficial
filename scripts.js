@@ -1,3 +1,48 @@
+// scripts.js
+
+// Mobile Navigation Toggle
+const mobileMenu = () => {
+    const nav = document.querySelector(’.nav-links’);
+    nav.style.display = nav.style.display === ‘flex’ ? ‘none’ : ‘flex’;
+}
+
+// Smooth Scroll for Anchor Links
+document.querySelectorAll(’a[href^=”#”]’).forEach(anchor => {
+    anchor.addEventListener(’click’, function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute(’href’)).scrollIntoView({
+            behavior: ‘smooth’
+        });
+    });
+});
+
+// Active Navigation Link Highlighting
+const setActiveLink = () => {
+    const currentPath = window.location.pathname.split(’/’).pop();
+    document.querySelectorAll(’.nav-links a’).forEach(link => {
+        if (link.getAttribute(’href’) === currentPath) {
+            link.classList.add(’active’);
+        }
+    });
+}
+
+// Form Handling
+const handleFormSubmit = (formId) => {
+    const form = document.getElementById(formId);
+    if (form) {
+        form.addEventListener(’submit’, (e) => {
+            e.preventDefault();
+            // Replace with actual form handling logic
+            alert(’Thank you for your message! We will respond shortly.’);
+            form.reset();
+        });
+    }
+}
+
+// Card Hover Effects
+const initCardInteractions = () => {
+
+
 // scripts.js (continued)
 
 // Initialize all functionality
