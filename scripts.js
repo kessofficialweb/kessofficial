@@ -79,7 +79,22 @@ document.querySelectorAll(’.nav-links a’).forEach(link => {
         });
     });
     
-
+// Footer link interactions
+document.querySelectorAll('.footer-column a').forEach(link => {
+    link.addEventListener('click', (e) => {
+        // Add smooth page transitions
+        document.body.style.opacity = '0';
+        setTimeout(() => {
+            window.location = link.href;
+        }, 300);
+    });
+    
+    // Add active state for current page
+    if (link.href === window.location.href) {
+        link.classList.add('active');
+        link.style.color = 'white';
+    }
+});
     // Back to Top Button
     const backToTop = document.createElement('button');
     backToTop.innerHTML = '↑';
