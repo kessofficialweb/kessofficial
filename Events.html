@@ -88,15 +88,28 @@
 </head>
 <body>
     <header class="header">
-        <nav class="nav">
-    <!-- Navigation Links -->
-    <div class=”nav-links”>
-        <a href=”about”>About</a>
-        <a href=”events”>Events</a>
-        <a href=”projects”>Projects</a
-        <a href=”contact”>Contact</a>
+    <nav class="nav">
+    <a href="index" class="logo">KESS</a>
+    
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu-btn">☰</button>
+
+    <!-- Navigation Links with Dropdown -->
+    <div class="nav-links">
+        <a href="about">About</a>
+        <a href="events">Events</a>
+        <div class="dropdown">
+            <button class="dropbtn">More ▼</button>
+            <div class="dropdown-content">
+                <a href="projects">Projects</a>
+                <a href="gallery">Gallery</a>
+                <a href="resources">Resources</a>
+                <a href="members">Members</a>
+            </div>
+        </div>
+        <a href="contact">Contact</a>
     </div>
-        </nav>
+    </nav>
     </header>
 
     <section class="hero">
