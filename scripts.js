@@ -1,101 +1,62 @@
+javascript
 // scripts.js
-
-// Mobile Navigation Toggle
-const mobileMenu = () => {
-    const nav = document.querySelector(’.nav-links’);
-    nav.style.display = nav.style.display === ‘flex’ ? ‘none’ : ‘flex’;
-}
-
-// Smooth Scroll for Anchor Links
-document.querySelectorAll(’a[href^=”#”]’).forEach(anchor => {
-    anchor.addEventListener(’click’, function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute(’href’)).scrollIntoView({
-            behavior: ‘smooth’
-        });
-    });
-});
-
-// Active Navigation Link Highlighting
-const setActiveLink = () => {
-    const currentPath = window.location.pathname.split(’/’).pop();
-    document.querySelectorAll(’.nav-links a’).forEach(link => {
-        if (link.getAttribute(’href’) === currentPath) {
-            link.classList.add(’active’);
-        }
-    });
-}
-
-// Form Handling
-const handleFormSubmit = (formId) => {
-    const form = document.getElementById(formId);
-    if (form) {
-        form.addEventListener(’submit’, (e) => {
-            e.preventDefault();
-            // Replace with actual form handling logic
-            alert(’Thank you for your message! We will respond shortly.’);
-            form.reset();
-        });
+document.addEventListener('DOMContentLoaded', () => {
+    // Mobile Menu Toggle
+    const mobileMenu = () => {
+        const nav = document.querySelector('.nav-links');
+        nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
     }
-}
 
-// Card Hover Effects
-const initCardInteractions = () => {
-
-
-// scripts.js (continued)
-
-// Initialize all functionality
-document.addEventListener(’DOMContentLoaded’, () => {
-    // Mobile menu button (add this HTML to your navigation)
-    const menuButton = document.createElement(’button’);
-    menuButton.innerHTML = ‘☰’;
-    menuButton.className = ‘mobile-menu-btn’;
+    // Initialize Mobile Menu Button
+    const menuButton = document.createElement('button');
+    menuButton.innerHTML = '☰';
+    menuButton.className = 'mobile-menu-btn';
     menuButton.onclick = mobileMenu;
-    document.querySelector(’.nav’).appendChild(menuButton);
+    document.querySelector('.nav').appendChild(menuButton);
 
-    // Initialize modules
-    setActiveLink();
-    handleFormSubmit(’contact-form’);
-    initCardInteractions();
-    initScrollAnimations();
-});
+    // Project Filtering
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            
+            const filter = btn.dataset.filter;
+            document.querySelectorAll('.project-card').forEach(card => {
+                card.style.display = (filter === 'all' || card.dataset.category === filter) 
+                    ? 'block' 
+                    : 'none';
+            });
+        });
+    });
 
-// Scroll Animations
-const initScrollAnimations = () => {
-    const observerOptions = {
-        threshold: 0.1
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add(’visible’);
+    // Form Handling
+    document.querySelectorAll('form').forEach(form => {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const successMsg = form.querySelector('.form-success');
+            if (successMsg) {
+                successMsg.style.display = 'block';
+                form.reset();
+                setTimeout(() => successMsg.style.display = 'none', 3000);
             }
         });
-    }, observerOptions);
-
-    document.querySelectorAll(’.card, .hero’).forEach(el => observer.observe(el));
-}
-
-// Back to Top Button
-const backToTop = () => {
-    const btn = document.createElement(’button’);
-    btn.innerHTML = ‘↑’;
-    btn.className = ‘back-to-top’;
-    btn.onclick = () => window.scrollTo({ top: 0, behavior: ‘smooth’ });
-    document.body.appendChild(btn);
-
-    window.addEventListener(’scroll’, () => {
-        btn.style.display = window.scrollY > 500 ? ‘block’ : ‘none’;
     });
-}
 
-// Initialize all components
-const init = () => {
-    backToTop();
-    // Add other initializations here
-}
+    // FAQ Toggle
+    document.querySelectorAll('.faq-item').forEach(item => {
+        item.addEventListener('click', () => {
+            item.classList.toggle('active');
+        });
+    });
 
-// Start the application
-init();
+    // Back to Top Button
+    const backToTop = document.createElement('button');
+    backToTop.innerHTML = '↑';
+    backToTop.className = 'back-to-top';
+    backToTop.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+    document.body.appendChild(backToTop);
+
+    window.addEventListener('scroll', () => {
+        backToTop.style.display = window.scrollY > 500 ? 'block' : 'none';
+    });
+});
