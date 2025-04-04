@@ -1,6 +1,6 @@
 
 # Kabale University Engineering Students Society (KESS).
-# [Official Website](http://kess.ac.ug/)
+# [Official Website](http://kessofficialweb.com/)
 
 
 Official website for the Engineering Students Society at Kabale University. Built with modern web technologies and designed for optimal user experience.
