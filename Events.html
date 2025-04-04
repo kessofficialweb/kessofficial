@@ -1,173 +1,170 @@
 <!DOCTYPE html>
-<html lang=”en”>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Events | KESS</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet>
     <style>
-        :root {
-            --primary: #2B2D42;
-            --accent: #EF233C;
-            --neutral: #EDF2F4;
-            --text: #2B2D42;
+        /* Enhanced Event Cards */
+        .event-card {
+            position: relative;
+            overflow: hidden;
+            border-left: 4px solid var(--accent);
         }
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            color: var(--text);
-            background: linear-gradient(150deg, #ffffff 0%, #f8f9fa 100%);
-        }
-        /* Header */
-        .header {
-            padding: 1.5rem;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(8px);
-            z-index: 1000;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-        }
-        .nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo {
-            font-family: 'Libre Baskerville', serif;
-            font-size: 1.8rem;
-            color: var(--primary);
-            text-decoration: none;
-        }
-        /* Hero Section */
-        .hero {
-            padding: 12rem 2rem 6rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        .hero-title {
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.1;
-            color: var(--primary);
-        }
-        /* Cards */
-        .cards {
-            max-width: 1200px;
-            margin: 4rem auto;
-            padding: 0 2rem;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        .card {
-            background: white;
-            border-radius: 12px;
-            padding: 2rem;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-        }
-        /* Contact Form */
-        .contact {
-            max-width: 800px;
-            margin: 6rem auto;
-            padding: 0 2rem;
-        }
-        .form {
-            background: white;
-            padding: 3rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-        }
-        input, textarea {
-            width: 100%;
-            padding: 1rem;
-            margin-bottom: 1.5rem;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            font-size: 1rem;
-        }
-        .btn {
-            background: var(--primary);
-            color: white;
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-        .btn:hover {
+
+        .event-date {
             background: var(--accent);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            display: inline-block;
+            margin-bottom: 1rem;
         }
-        /* Footer */
-        .footer {
+
+        .event-meta {
+            display: flex;
+            gap: 1rem;
+            margin: 1rem 0;
+            color: var(--text-light);
+        }
+
+        .event-type {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(255,255,255,0.9);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Event Filters */
+        .event-filters {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-group {
+            background: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        /* Calendar View */
+        .calendar-toggle {
             text-align: center;
-            padding: 3rem;
-            color: #666;
-            border-top: 1px solid #eee;
+            margin: 2rem 0;
         }
-        @media (max-width: 768px) {
-            .hero-title {
-                font-size: 2.5rem;
-            }
+
+        .calendar-view {
+            display: none;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            padding: 0 2rem;
+        }
+
+        /* Progress Bar */
+        .registration-progress {
+            height: 6px;
+            background: var(--neutral);
+            border-radius: 3px;
+            margin: 1rem 0;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: var(--accent);
+            border-radius: 3px;
+            width: 75%;
         }
     </style>
 </head>
 <body>
-    <header class=”header”>
+    <header class="header">
         <nav class="nav">
-            <a href="index" class="logo"> KESS</a>
+            <a href="index" class="logo">KESS</a>
             <div class="nav-links">
                 <a href="about">About</a>
-                <a href="Events">Events</a>
-                <a href= "projects.html">Projects</a>
+                <a href="events" class="active">Events</a>
+                <a href="projects">Projects</a>
                 <a href="contact">Contact</a>
+                <div class="search-bar">
+                    <input type="text" class="search-input" placeholder="Search events...">
+                    <button class="btn">Search</button>
+                </div>
             </div>
         </nav>
     </header>
 
-    <section class=”hero”>
-        <h1 class=”hero-title”>Upcoming Events</h1>
+    <section class="hero">
+        <h1 class="hero-title">Upcoming Events</h1>
         <p>Join our technical workshops, competitions, and networking events</p>
+        <div class="event-filters">
+            <div class="filter-group">
+                <select class="filter-select">
+                    <option>All Categories</option>
+                    <option>Workshops</option>
+                    <option>Competitions</option>
+                    <option>Lectures</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <input type="date" class="filter-date">
+            </div>
+        </div>
     </section>
 
-    <div class=”cards” style=”max-width: 1200px;”>
-        <div class=”card”>
-            <div class=”event-date”>MAR 15</div>
-            <h3>Robotics Workshop</h3>
-            <p class=”event-details”>
-                <span class=”event-time”>10:00 AM - 4:00 PM</span>
-                <span class=”event-location”>Engineering Lab 3B</span>
-            </p>
-            <button class=”btn”>RSVP Now</button>
+    <div class="cards">
+        <div class="card event-card">
+            <span class="event-type">Workshop</span>
+            <div class="event-date">MAR 15</div>
+            <h3>Advanced Robotics Workshop</h3>
+            <div class="event-meta">
+                <span>🕒 10:00 AM - 4:00 PM</span>
+                <span>📍 Engineering Lab 3B</span>
+            </div>
+            <div class="registration-progress">
+                <div class="progress-bar"></div>
+            </div>
+            <p class="event-description">Hands-on session with industrial robotic arms and AI integration techniques.</p>
+            <div class="event-footer">
+                <button class="btn">RSVP Now</button>
+                <span class="remaining-slots">15/20 seats remaining</span>
+            </div>
         </div>
-        
-        <div class=”card”>
-            <div class=”event-date”>APR 2</div>
+
+        <div class="card event-card">
+            <span class="event-type">Competition</span>
+            <div class="event-date">APR 2</div>
             <h3>CAD Design Challenge</h3>
-            <p class=”event-details”>
-                <span class=”event-time”>2:00 PM - 5:00 PM</span>
-                <span class=”event-location”>Virtual Event</span>
-            </p>
-            <button class=”btn”>RSVP Now</button>
+            <div class="event-meta">
+                <span>🕒 2:00 PM - 5:00 PM</span>
+                <span>📍 Virtual Event</span>
+            </div>
+            <div class="registration-progress">
+                <div class="progress-bar" style="width: 90%"></div>
+            </div>
+            <p class="event-description">Annual CAD modeling competition with professional jury panel.</p>
+            <div class="event-footer">
+                <button class="btn">Register Now</button>
+                <span class="remaining-slots">45 participants registered</span>
+            </div>
         </div>
     </div>
 
+    <section class="calendar-toggle">
+        <button class="btn btn-secondary" id="toggleView">Switch to Calendar View</button>
+    </section>
+
     <footer class="footer">
-        <p>© 2025 Kabale University Engineering Students Society (KESS) </p>
+        <p>© 2025 Kabale University Engineering Students Society (KESS)</p>
     </footer>
     <script src="scripts.js"></script>
 </body>
