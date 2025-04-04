@@ -712,3 +712,68 @@ input, select, textarea {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+.persistent-tabs {
+    position: fixed;
+    top: 80px; /* Adjust based on header height */
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 999;
+}
+
+.tab-nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 1px;
+    padding: 0 1rem;
+}
+
+.tab {
+    padding: 1rem 2rem;
+    text-decoration: none;
+    color: var(--text-light);
+    background: var(--neutral);
+    transition: var(--transition);
+    border-bottom: 3px solid transparent;
+    display: flex;
+    align-items: center;
+}
+
+.tab:hover,
+.tab.active {
+    background: #fff;
+    color: var(--primary);
+    border-bottom-color: var(--accent);
+}
+
+/* Mobile tabs */
+@media (max-width: 768px) {
+    .persistent-tabs {
+        top: 60px; /* Adjust for mobile header height */
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .tab-nav {
+        padding: 0;
+        flex-wrap: nowrap;
+    }
+    
+    .tab {
+        padding: 0.8rem 1.2rem;
+        font-size: 0.9rem;
+        white-space: nowrap;
+    }
+}
+
+/* Add this to body to prevent content overlap */
+body {
+    padding-top: 140px; /* Header height + tabs height */
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 110px;
+    }
+}
