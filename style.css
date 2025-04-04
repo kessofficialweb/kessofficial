@@ -293,3 +293,75 @@ input, textarea, select {
         display: block;
     }
 }
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    color: var(--text);
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: white;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    z-index: 1000;
+    top: 100%;
+    left: 0;
+}
+
+.dropdown-content a {
+    color: var(--text);
+    padding: 1rem;
+    text-decoration: none;
+    display: block;
+    transition: var(--transition);
+}
+
+.dropdown-content a:hover {
+    background: var(--neutral);
+    transform: translateX(5px);
+}
+
+/* Show dropdown on hover (desktop) */
+@media (min-width: 769px) {
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+}
+
+/* Mobile Dropdown Styles */
+@media (max-width: 768px) {
+    .dropdown {
+        width: 100%;
+    }
+    
+    .dropbtn {
+        width: 100%;
+        text-align: left;
+        padding: 1rem 0;
+    }
+    
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        background: var(--neutral);
+        border-radius: 0;
+        display: none;
+    }
+    
+    .dropdown.active .dropdown-content {
+        display: block;
+    }
+}
