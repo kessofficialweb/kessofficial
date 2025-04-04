@@ -43,7 +43,7 @@ Official website for the Engineering Students Society at Kabale University. Buil
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/kess0fficial/kess0fficial/commits?author=kess0fficial
+   git clone https://github.com/kess0fficial/kess0fficial
    ```
 2. Open in browser:
    ```bash
