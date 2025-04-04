@@ -595,3 +595,133 @@ footer {
         display: block;
     }
 }
+
+/* Mobile Navigation Styles */
+.header {
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.8rem;
+    color: #2B2D42;
+    text-decoration: none;
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.hamburger-line {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: #2B2D42;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.mobile-dropdown {
+    position: relative;
+}
+
+.mobile-dropbtn {
+    background: none;
+    border: none;
+    color: #2B2D42;
+    font: inherit;
+    cursor: pointer;
+    padding: 0;
+}
+
+.mobile-dropdown-content {
+    display: none;
+    position: absolute;
+    background: white;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    padding: 0.5rem;
+    min-width: 200px;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        padding: 1rem;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .mobile-dropdown-content {
+        position: static;
+        box-shadow: none;
+        background: #F0F4F8;
+        display: none;
+        padding-left: 1rem;
+    }
+
+    .mobile-dropdown.active .mobile-dropdown-content {
+        display: block;
+    }
+
+    .mobile-dropbtn::after {
+        content: ' ▾';
+        display: inline-block;
+        transition: transform 0.3s ease;
+    }
+
+    .mobile-dropdown.active .mobile-dropbtn::after {
+        transform: rotate(180deg);
+    }
+
+    .hamburger.active .hamburger-line:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .hamburger.active .hamburger-line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .hamburger-line:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+}
