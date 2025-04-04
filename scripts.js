@@ -198,3 +198,24 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
         successMessage.style.display = 'none';
     }, 3000);
 });
+// Highlight active tab
+document.addEventListener('DOMContentLoaded', () => {
+    const currentPath = window.location.pathname.split('/').pop();
+    
+    document.querySelectorAll('.tab').forEach(tab => {
+        const tabPath = tab.getAttribute('href').split('/').pop();
+        if (currentPath === tabPath) {
+            tab.classList.add('active');
+        }
+    });
+
+    // Mobile tabs scroll behavior
+    const activeTab = document.querySelector('.tab.active');
+    if (activeTab && window.innerWidth <= 768) {
+        activeTab.scrollIntoView({
+            behavior: 'auto',
+            block: 'nearest',
+            inline: 'center'
+        });
+    }
+});
