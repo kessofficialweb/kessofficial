@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang=”en”>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,164 +7,160 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary: #2B2D42;
-            --accent: #EF233C;
-            --neutral: #EDF2F4;
-            --text: #2B2D42;
-        }
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            color: var(--text);
-            background: linear-gradient(150deg, #ffffff 0%, #f8f9fa 100%);
-        }
-        /* Header */
-        .header {
-            padding: 1.5rem;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(8px);
-            z-index: 1000;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-        }
-        .nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo {
-            font-family: 'Libre Baskerville', serif;
-            font-size: 1.8rem;
-            color: var(--primary);
-            text-decoration: none;
-        }
-        /* Hero Section */
-        .hero {
-            padding: 12rem 2rem 6rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        .hero-title {
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.1;
-            color: var(--primary);
-        }
-        /* Cards */
-        .cards {
+        /* Enhanced Contact Styles */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
             max-width: 1200px;
             margin: 4rem auto;
             padding: 0 2rem;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
         }
-        .card {
-            background: white;
+
+        .contact-map {
+            height: 400px;
             border-radius: 12px;
-            padding: 2rem;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
         }
-        .card:hover {
-            transform: translateY(-5px);
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
         }
-        /* Contact Form */
-        .contact {
-            max-width: 800px;
-            margin: 6rem auto;
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            max-width: 1200px;
+            margin: 4rem auto;
             padding: 0 2rem;
         }
-        .form {
+
+        .faq-item {
             background: white;
-            padding: 3rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-        }
-        input, textarea {
-            width: 100%;
-            padding: 1rem;
-            margin-bottom: 1.5rem;
-            border: 1px solid #ddd;
+            margin-bottom: 1rem;
             border-radius: 8px;
-            font-size: 1rem;
-        }
-        .btn {
-            background: var(--primary);
-            color: white;
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 8px;
+            padding: 1.5rem;
             cursor: pointer;
-            transition: background 0.3s ease;
+            transition: all 0.3s ease;
         }
-        .btn:hover {
-            background: var(--accent);
+
+        .faq-item:hover {
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
-        /* Footer */
-        .footer {
+
+        /* Form Enhancements */
+        .form-header {
             text-align: center;
-            padding: 3rem;
-            color: #666;
-            border-top: 1px solid #eee;
+            margin-bottom: 2rem;
         }
-        @media (max-width: 768px) {
-            .hero-title {
-                font-size: 2.5rem;
-            }
+
+        .form-success {
+            display: none;
+            background: #e8f5e9;
+            color: #2e7d32;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
         }
     </style>
 </head>
 <body>
-    <header class=”header”>
+    <header class="header">
         <nav class="nav">
-            <a href="index" class="logo"> KESS</a>
+            <a href="index" class="logo">KESS</a>
             <div class="nav-links">
                 <a href="about">About</a>
-                <a href="Events">Events</a>
-                <a href=”projects.html”>Projects</a>
-                <a href="contact">Contact</a>
+                <a href="events">Events</a>
+                <a href="projects">Projects</a>
+                <a href="contact" class="active">Contact</a>
             </div>
         </nav>
     </header>
-    <section class=”hero”>
-        <h1 class=”hero-title”>Get in Touch</h1>
+
+    <section class="hero">
+        <h1 class="hero-title">Get in Touch</h1>
         <p>Connect with our team for collaborations and inquiries</p>
     </section>
 
-    <div class=”contact-info” style=”max-width: 1000px; margin: 4rem auto;”>
-        <div class=”cards”>
-            <div class=”card”>
-                <h3>Visit Us</h3>
+    <div class="contact-container">
+        <div class="contact-info">
+            <div class="card">
+                <h3>📍 Visit Us</h3>
                 <p>Engineering Building B<br>
-                Kabale University Engineering campus <br>
+                Kabale University Campus<br>
                 Open Mon-Fri: 9AM - 5PM</p>
+                <div class="contact-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.755326711496!2d30.00927731526191!d!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDAxJzI3LjgiTiAzMMKwMDAnNTkuOCJF!5e0!3m2!1sen!2sug!4v1620000000000!5m2!1sen!2sug" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                    </iframe>
+                </div>
             </div>
-            
-            <div class=”card”>
-                <h3>Contact Details</h3>
-                <p>Email: kess.kab22@gmail.com<br>
-                Phone: (555) 123-4567<br>
-                Social: @kess0fficial</p>
+        </div>
+
+        <div class="contact-form">
+            <div class="form">
+                <div class="form-header">
+                    <h2>Send Us a Message</h2>
+                    <p>We typically respond within 24 hours</p>
+                </div>
+                <form id="contactForm">
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="email" placeholder="Email Address" required>
+                    <select required>
+                        <option value="">Select Department</option>
+                        <option>Technical Support</option>
+                        <option>Event Inquiry</option>
+                        <option>Partnerships</option>
+                    </select>
+                    <textarea rows="5" placeholder="Your Message" required></textarea>
+                    <button class="btn" type="submit">Send Message</button>
+                    <div class="form-success" id="successMessage">
+                        Message sent successfully!
+                    </div>
+                </form>
             </div>
         </div>
     </div>
 
-    <!-- Include contact form from original index.html -->
-    
+    <section class="faq-section">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <h3>How can I join KESS? ▼</h3>
+            <p class="faq-answer">Membership is open to all engineering students...</p>
+        </div>
+        <!-- Add more FAQ items -->
+    </section>
+
     <footer class="footer">
-        <p>© 2025 Kabale University Engineering Students Society (KESS) </p>
+        <div class="social-links">
+            <a href="#" class="social-icon">📧</a>
+            <a href="#" class="social-icon">🐦</a>
+            <a href="#" class="social-icon">📸</a>
+            <a href="#" class="social-icon">💼</a>
+        </div>
+        <p>© 2025 Kabale University Engineering Students Society (KESS)</p>
     </footer>
     <script src="scripts.js"></script>
 </body>
