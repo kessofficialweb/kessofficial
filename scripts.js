@@ -1,4 +1,3 @@
-javascript
 // scripts.js
 document.addEventListener('DOMContentLoaded', () => {
     // Mobile Menu Toggle
