@@ -59,3 +59,33 @@ document.addEventListener('DOMContentLoaded', () => {
         backToTop.style.display = window.scrollY > 500 ? 'block' : 'none';
     });
 });
+// Mobile Menu Functionality
+const mobileMenu = () => {
+    const navLinks = document.querySelector(’.nav-links’);
+    const menuBtn = document.querySelector(’.mobile-menu-btn’);
+    
+    navLinks.classList.toggle(’active’);
+    menuBtn.classList.toggle(’active’);
+}
+
+// Initialize Mobile Menu Button
+document.querySelector(’.mobile-menu-btn’).addEventListener(’click’, mobileMenu);
+
+// Close menu when clicking outside
+document.addEventListener(’click’, (e) => {
+    const navLinks = document.querySelector(’.nav-links’);
+    const menuBtn = document.querySelector(’.mobile-menu-btn’);
+    
+    if (!navLinks.contains(e.target) && !menuBtn.contains(e.target)) {
+        navLinks.classList.remove(’active’);
+        menuBtn.classList.remove(’active’);
+    }
+});
+
+// Close menu on navigation
+document.querySelectorAll(’.nav-links a’).forEach(link => {
+    link.addEventListener(’click’, () => {
+        document.querySelector(’.nav-links’).classList.remove(’active’);
+        document.querySelector(’.mobile-menu-btn’).classList.remove(’active’);
+    });
+});
