@@ -172,3 +172,29 @@ document.querySelectorAll('.comment-card.compact').forEach(card => {
         this.classList.toggle('expanded');
     });
 });
+
+// FAQ Accordion
+document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+        const faqItem = button.closest('.faq-item');
+        faqItem.classList.toggle('active');
+        
+        // Close other FAQs
+        document.querySelectorAll('.faq-item').forEach(item => {
+            if (item !== faqItem) item.classList.remove('active');
+        });
+    });
+});
+
+// Form Handling
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const successMessage = document.getElementById('successMessage');
+    
+    successMessage.style.display = 'block';
+    this.reset();
+    
+    setTimeout(() => {
+        successMessage.style.display = 'none';
+    }, 3000);
+});
