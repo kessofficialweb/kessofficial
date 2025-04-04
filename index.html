@@ -95,42 +95,40 @@
     </style>
 </head>
 <body>
-    <header class="header">
-    <nav class="nav">
-        <a href="index.html" class="logo">KESS</a>
-        
-        <!-- Mobile Hamburger -->
-        <button class="hamburger">
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-        </button>
+    <!-- Updated Header Structure -->
+<header class="header">
+    <nav class="navbar">
+        <!-- Logo Section -->
+        <div class="header-top">
+            <a href="index.html" class="logo">KESS</a>
+            <button class="hamburger">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
 
-        <!-- Navigation Links with Dropdown -->
-        <div class="nav-links">
-            <a href="about.html">About</a>
-            <div class="mobile-dropdown">
-                <button class="mobile-dropbtn">Events ▾</button>
-                <div class="mobile-dropdown-content">
-                    <a href="events.html#workshops">Workshops</a>
-                    <a href="events.html#competitions">Competitions</a>
-                    <a href="events.html#lectures">Lectures</a>
-                </div>
+        <!-- Combined Navigation -->
+        <div class="header-bottom">
+            <!-- Main Navigation -->
+            <ul class="nav-links">
+                <li><a href="about.html">About</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <!-- Tabbed Navigation -->
+            <div class="header-tabs">
+                <a href="gallery.html" class="tab">Gallery</a>
+                <a href="resources.html" class="tab">Resources</a>
+                <a href="blog.html" class="tab">Blog</a>
+                <a href="members.html" class="tab">Members</a>
             </div>
-            <a href="projects.html">Projects</a>
-            <a href="contact.html">Contact</a>
         </div>
     </nav>
 </header>
-<div class="persistent-tabs">
-    <nav class="tab-nav">
-        <a href="about.html" class="tab">About</a>
-        <a href="events.html" class="tab">Events</a>
-        <a href="projects.html" class="tab">Projects</a>
-        <a href="contact.html" class="tab">Contact</a>
-        <a href="gallery.html" class="tab">Gallery</a>
-    </nav>
-</div>
+
     <section class="hero">
         <h1 class="hero-title">Engineering Innovation Collective</h1>
         <p>Bridging academic excellence with real-world engineering solutions</p>
