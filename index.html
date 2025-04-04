@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kabale University Engineering Students Society</title>
-    <link rel=”stylesheet” href=”style.css”>
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -95,29 +95,34 @@
     </style>
 </head>
 <body>
-    <header class=”header”>
-    <nav class=”navbar”>
-        <a href=”index.html” class=”logo”>KESS</a>
-        <button class=”hamburger”>
-            <span class=”hamburger-line”></span>
-            <span class=”hamburger-line”></span>
-            <span class=”hamburger-line”></span>
+    <header class="header">
+    <nav class="nav">
+        <a href="index.html" class="logo">KESS</a>
+        
+        <!-- Mobile Hamburger -->
+        <button class="hamburger">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
         </button>
-        <ul class=”nav-links”>
-            <li><a href=”about.html”>About</a></li>
-            <li class=”dropdown”>
-                <a href=”events.html”>Events ▾</a>
-                <ul class=”dropdown-menu”>
-                    <li><a href=”events.html#workshops”>Workshops</a></li>
-                    <li><a href=”events.html#competitions”>Competitions</a></li>
-                </ul>
-            </li>
-            <li><a href=”projects.html”>Projects</a></li>
-            <li><a href=”contact.html”>Contact</a></li>
-        </ul>
+
+        <!-- Navigation Links with Dropdown -->
+        <div class="nav-links">
+            <a href="about.html">About</a>
+            <div class="mobile-dropdown">
+                <button class="mobile-dropbtn">Events ▾</button>
+                <div class="mobile-dropdown-content">
+                    <a href="events.html#workshops">Workshops</a>
+                    <a href="events.html#competitions">Competitions</a>
+                    <a href="events.html#lectures">Lectures</a>
+                </div>
+            </div>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </div>
     </nav>
-    </header>
-    
+</header>
+
     <section class="hero">
         <h1 class="hero-title">Engineering Innovation Collective</h1>
         <p>Bridging academic excellence with real-world engineering solutions</p>
