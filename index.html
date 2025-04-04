@@ -96,48 +96,39 @@
 </head>
 <body>
     <header class="header">
-        <nav class="nav">
-            <a href="index" class="logo">KESS</a>
-    
-    
-    <!-- Navigation Links with Dropdown -->
-    <div class="nav-links">
-        <a href="about">About</a>
-        <a href="events">Events</a>
-        <div class="dropdown">
-            <button class="dropbtn">More ▼</button>
-            <div class="dropdown-content">
-                <a href="projects">Projects</a>
-                <a href="gallery">Gallery</a>
-                <a href="resources">Resources</a>
-                <a href="members">Members</a>
-            </div>
-        </div>
-        <a href="contact">Contact</a>
-    </div>
-    <!-- Mobile Menu Button -->
-    <div class="dropdown">
-        <button class="mobile-menu-btn">☰</button>
-        <div class="dropdown-content">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="events.html">Events</a>
-            <a href="projects.html">Projects</a>
-            <a href="contact.html">Contact</a>
-        </div>
-    </div>
-
-        </nav>
+    <nav class="navbar">
+        <a href="index.html" class="logo">KESS</a>
         
-        <!--nav class="nav">
-            <!--a href=”index” class=”logo”>KESS</a-->
-    
-    <!-- Mobile Menu Button -->
+        <!-- Desktop Navigation -->
+        <ul class="desktop-menu">
+            <li><a href="about.html">About</a></li>
+            <li class="dropdown">
+                <a href="events.html">Events ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="events.html#workshops">Workshops</a></li>
+                    <li><a href="events.html#competitions">Competitions</a></li>
+                </ul>
+            </li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
 
-    <!-- Navigation Links -->
-            
-        <!--/nav-->
-    </header>
+        <!-- Mobile Hamburger -->
+        <button class="hamburger" aria-label="Menu">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <ul class="mobile-menu">
+        <li><a href="about.html">About</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</header>
 
     <section class="hero">
         <h1 class="hero-title">Engineering Innovation Collective</h1>
@@ -168,9 +159,12 @@
             <button class="btn" type="submit">Post Comment</button>
         </form>
         <div class="comment-list">
-            <div class="comment-card">
-                <h4>John Doe <span class="comment-date">• 2 hours ago</span></h4>
-                <p>Great initiative! Looking forward to the next workshop.</p>
+            <div class="comment-card compact">
+            <div class="comment-header">
+            <h4 class="comment-author">John Doe</h4>
+            <span class="comment-date">2h ago</span>
+        </div>
+    <p class="comment-excerpt">Great initiative! Looking forward to the next workshop.</p>
             </div>
             <!-- More comments -->
         </div>
