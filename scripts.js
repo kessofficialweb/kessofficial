@@ -140,3 +140,35 @@ window.addEventListener('resize', () => {
         });
     }
 });
+document.addEventListener(’DOMContentLoaded’, () => {
+    const hamburger = document.querySelector(’.hamburger’);
+    const mobileMenu = document.querySelector(’.mobile-menu’);
+
+    // Toggle Mobile Menu
+    hamburger.addEventListener(’click’, () => {
+        hamburger.classList.toggle(’active’);
+        mobileMenu.classList.toggle(’active’);
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener(’click’, (e) => {
+        if (!e.target.closest(’.navbar’) && !e.target.closest(’.mobile-menu’)) {
+            hamburger.classList.remove(’active            mobileMenu.classList.remove(’active’);
+        }
+    });
+
+    // Close menu on link click
+    document.querySelectorAll(’.mobile-menu a’).forEach(link => {
+        link.addEventListener(’click’, () => {
+            hamburger.classList.remove(’active’);
+            mobileMenu.classList.remove(’active’);
+        });
+    });
+});
+
+// Add to scripts.js
+document.querySelectorAll('.comment-card.compact').forEach(card => {
+    card.addEventListener('click', function() {
+        this.classList.toggle('expanded');
+    });
+});
