@@ -462,7 +462,6 @@ footer {
     padding: 0.2rem 0;
     text-decoration: none;
     line-height: 1.3; 
-    display: inline-block;
     transition: var(--transition);
 }
 
