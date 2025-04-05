@@ -92,6 +92,62 @@ body {
     box-shadow: 0 -2px 0 var(--accent) inset;
 }
 
+/* Hamburger Button Styles */
+.hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.35rem;
+    width: 48px;
+    height: 48px;
+    transition: var(--transition);
+    position: relative;
+    z-index: 1001;
+}
+
+.hamburger-line {
+    width: 24px;
+    height: 2px;
+    background: var(--primary);
+    transition: var(--transition);
+    transform-origin: center;
+    display: block;
+}
+
+/* Hide the Unicode character */
+.hamburger > :not(.hamburger-line) {
+    display: none;
+}
+
+/* Active State Animation */
+.hamburger.active .hamburger-line:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+}
+
+.hamburger.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+.hamburger.active .hamburger-line:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+}
+
+/* Hover Effects */
+.hamburger:hover {
+    transform: scale(1.05);
+}
+
+.hamburger:hover .hamburger-line {
+    background: var(--accent);
+}
+
+
 /* Mobile Styles */
 @media (max-width: 768px) {
     body {
