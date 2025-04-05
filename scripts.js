@@ -106,3 +106,30 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+// Hamburger Functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-links'); // Update selector to match your menu
+    
+    // Toggle Menu
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+
+    // Close Menu on Outside Click
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.header') && !e.target.closest('.nav-links')) {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }
+    });
+
+    // Close Menu on Link Click (Mobile)
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    });
+});
