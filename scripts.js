@@ -142,3 +142,42 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+
+// Form Handling
+document.getElementById('registrationForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Formspree AJAX submission
+    const formData = new FormData(this);
+    
+    fetch(this.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(response => {
+        if (response.ok) {
+            document.getElementById('formSuccess').style.display = 'block';
+            this.reset();
+            setTimeout(() => {
+                document.getElementById('formSuccess').style.display = 'none';
+            }, 5000);
+        }
+    }).catch(error => {
+        console.error('Error:', error);
+    });
+});
+
+// Real-time Validation
+document.querySelectorAll('input, select').forEach(element => {
+    element.addEventListener('input', () => {
+        if (element.checkValidity()) {
+            element.classList.remove('invalid');
+        } else {
+            element.classList.add('invalid');
+        }
+    });
+});
+
+
