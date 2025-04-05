@@ -691,7 +691,7 @@ input, select, textarea {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    gap: 1px;
+    gap: 0.5px;
     padding: 0 1rem;
 }
 
