@@ -506,18 +506,7 @@ footer {
     .mobile-menu-btn {
         display: block;
     }
-    .footer-column a {
-        padding: 0.15rem 0; /* Even smaller on mobile */
-        font-size: 0.75rem; /* Optional: reduce font size */
-     }
-    .footer-column {
-        gap: 0.3rem;
-    }
     
-    /* If using hover effects */
-    .footer-column a:hover {
-        transform: none; /* Remove translateX if present */
-    }
 }
 
 /* Dropdown Styles */
