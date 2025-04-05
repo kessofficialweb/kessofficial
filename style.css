@@ -76,13 +76,14 @@ body {
 }
 
 .tab {
-    padding: 0.8rem 1.5rem;
+    padding: 0.6rem 1rem;
     text-decoration: none;
     color: var(--text-light);
     background: var(--neutral);
     transition: var(--transition);
-    border-radius: 4px 4px 0 0;
-    font-size: 0.95rem;
+    border-radius: 3px 3px 0 0;
+    font-size: 0.85rem;
+    gap: 2px;
 }
 
 .tab:hover,
@@ -175,9 +176,10 @@ body {
     }
 
     .tab {
-        padding: 0.6rem 1rem;
+        padding: 0.4rem 0.8rem;
         border-radius: 20px;
-        margin: 0.2rem;
+        font-size: 0.75rem;
+        margin: 0.1rem;
     }
 
     .navbar.active .header-bottom {
