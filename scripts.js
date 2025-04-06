@@ -179,5 +179,18 @@ document.querySelectorAll('input, select').forEach(element => {
         }
     });
 });
+// Add smooth page transition
+document.querySelectorAll('.btn-projects').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = this.href;
+        
+        // Add transition effect
+        document.body.style.opacity = '0';
+        setTimeout(() => {
+            window.location.href = target;
+        }, 300);
+    });
+});
 
 
