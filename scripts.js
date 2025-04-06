@@ -259,3 +259,37 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize controls
     addPdfControls();
 });
+// Blog Interactions
+document.addEventListener('DOMContentLoaded', () => {
+    // Read More functionality
+    document.querySelectorAll('.btn-read-more').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const post = this.closest('.blog-post');
+            const excerpt = post.querySelector('.post-excerpt');
+            const fullText = post.dataset.fullText || excerpt.innerHTML;
+            
+            if (!post.dataset.expanded) {
+                // Replace with full content
+                post.dataset.fullText = excerpt.innerHTML;
+                excerpt.innerHTML = `Lorem ipsum dolor sit amet, consectetur adipiscing elit... [Full article content]`;
+                this.textContent = 'Show Less';
+                post.dataset.expanded = true;
+            } else {
+                // Restore excerpt
+                excerpt.innerHTML = fullText;
+                this.textContent = 'Read More';
+                delete post.dataset.expanded;
+            }
+        });
+    });
+
+    // Pagination
+    document.querySelectorAll('.btn-pagination').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('.btn-pagination.active').classList.remove('active');
+            this.classList.add('active');
+        });
+    });
+});
