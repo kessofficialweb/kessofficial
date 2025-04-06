@@ -1,14 +1,16 @@
 
 /* style.css */
 :root {
-    --primary: #63113d;
+    --primary: #4a3d7b;
     --accent: #64113D;
     --neutral: #948f9e;
     --text: #2B2D42;
     --text-light: #6c757d;
     --success: #4CAF50;
     --warning: #FFC107;
-    
+    #63113d
+
+
 
 
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
