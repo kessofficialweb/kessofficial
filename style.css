@@ -489,14 +489,23 @@ input, textarea, select {
     }
 }
 /* Footer Styles */
-footer {
+.footer {
     background: var(--primary);
     color: white;
-    padding: 4rem 2rem 2rem;
-    margin-top: 4rem;
-    width: 100%;
+    padding: 4rem 0 2rem;
+    margin-top: auto; /* Pushes footer to bottom */
+    width: 100vw;
     position: relative;
-    left: 0;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
 .footer-links {
