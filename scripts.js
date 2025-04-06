@@ -327,3 +327,52 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// Add this to your scripts.js
+document.addEventListener('DOMContentLoaded', () => {
+    const toggleButton = document.getElementById('toggleView');
+    const eventsList = document.querySelector('.events-list'); // Your list view container
+    const calendarView = document.querySelector('.calendar-view'); // Add calendar container to HTML
+
+    // Initial state
+    let isCalendarView = false;
+    
+    // Calendar initialization function
+    function initCalendar() {
+        // Initialize your calendar here (using FullCalendar or other library)
+        console.log('Calendar initialized');
+    }
+
+    // Toggle functionality
+    toggleButton.addEventListener('click', () => {
+        isCalendarView = !isCalendarView;
+        
+        if(isCalendarView) {
+            eventsList.style.display = 'none';
+            calendarView.style.display = 'block';
+            toggleButton.textContent = 'Switch to List View';
+            
+            // Initialize calendar on first click
+            if(!calendarView.innerHTML) {
+                initCalendar();
+            }
+        } else {
+            eventsList.style.display = 'block';
+            calendarView.style.display = 'none';
+            toggleButton.textContent = 'Switch to Calendar View';
+        }
+    });
+});
+function initCalendar() {
+    const calendarEl = document.getElementById('calendar');
+    const calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        events: '/api/events', // Your events endpoint
+        headerToolbar: {
+            left: 'prev,next today',
+            center: 'title',
+            right: 'dayGridMonth,timeGridWeek,timeGridDay'
+        }
+    });
+    calendar.render();
+}
