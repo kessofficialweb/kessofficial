@@ -1260,4 +1260,23 @@ body {
         flex-direction: column;
         gap: 0.5rem;
     }
-        }
+}
+
+.footer-column a {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 0.3rem 0;
+}
+
+.footer-column i {
+    width: 20px;
+    text-align: center;
+    font-size: 1.1rem;
+    transition: var(--transition);
+}
+
+.footer-column a:hover i {
+    color: var(--accent);
+    transform: scale(1.1);
+}
