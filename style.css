@@ -93,6 +93,42 @@ body {
     gap: 1px;
 }
 
+/* Add to style.css */
+.projects-cta {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.projects-cta .card {
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+    color: white;
+}
+
+.btn-projects {
+    margin-top: 1.5rem;
+    padding: 1rem 2.5rem;
+    background: rgba(255,255,255,0.15);
+    border: 2px solid rgba(255,255,255,0.3);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    transition: var(--transition);
+}
+
+.btn-projects:hover {
+    background: rgba(255,255,255,0.25);
+    transform: translateY(-3px);
+}
+
+.cta-arrow {
+    width: 20px;
+    height: 20px;
+    stroke-width: 2;
+}
+
 .tab {
     padding: 0.6rem 1rem;
     text-decoration: none;
