@@ -83,7 +83,7 @@ body {
 .logo {
     font-family: 'Libre Baskerville', serif;
     font-size: 1.8rem;
-    color: rgba(61,7,52,0.15);
+    color: rgba(61,7,52,1);
     text-decoration: none;
 }
 
