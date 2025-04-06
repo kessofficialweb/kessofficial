@@ -999,3 +999,54 @@ body {
     color: #ccc;
     padding: 10px 0;
 }
+
+/* Constitution Page Styles */
+.constitution-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.pdf-viewer {
+    width: 100%;
+    height: 80vh;
+    border: 1px solid var(--neutral);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 1.5rem;
+}
+
+.pdf-viewer object {
+    width: 100%;
+    height: 100%;
+}
+
+.pdf-controls {
+    text-align: right;
+    margin-bottom: 1rem;
+}
+
+.btn-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    background: var(--success);
+    color: white;
+}
+
+.download-icon {
+    width: 18px;
+    height: 18px;
+}
+
+@media (max-width: 768px) {
+    .pdf-viewer {
+        height: 60vh;
+    }
+    
+    .btn-download {
+        width: 100%;
+        justify-content: center;
+    }
+}
