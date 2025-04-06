@@ -1306,3 +1306,19 @@ body {
     color: var(--accent);
     transform: scale(1.1);
 }
+
+.calendar-view {
+    margin-top: 2rem;
+}
+
+/* Example calendar container styling */
+#calendar {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.events-list {
+    transition: opacity 0.3s ease;
+}
