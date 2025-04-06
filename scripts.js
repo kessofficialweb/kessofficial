@@ -192,5 +192,31 @@ document.querySelectorAll('.btn-projects').forEach(btn => {
         }, 300);
     });
 });
+// Gallery Modal Functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById("modalImage");
+    const captionText = document.getElementById("caption");
+    
+    // Get all gallery images
+    document.querySelectorAll('.gallery-item img').forEach(img => {
+        img.addEventListener('click', () => {
+            modal.style.display = "block";
+            modalImg.src = img.src;
+            captionText.innerHTML = img.parentElement.querySelector('figcaption').innerHTML;
+        });
+    });
 
+    // Close modal
+    document.querySelector('.modal-close').addEventListener('click', () => {
+        modal.style.display = "none";
+    });
+
+    // Close when clicking outside
+    window.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+});
 
