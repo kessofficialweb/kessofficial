@@ -1,0 +1,53 @@
+<!-- gallery.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | KESS</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <!-- Paste your existing header code here -->
+    </header>
+
+    <main class="gallery-container">
+        <div class="card">
+            <h1>KESS Gallery</h1>
+            <p class="gallery-intro">Explore moments from our events, projects, and community activities.</p>
+            
+            <div class="gallery-grid">
+                <!-- Gallery Items -->
+                <figure class="gallery-item">
+                    <img src="gallery1.jpg" alt="Team working on project" loading="lazy">
+                    <figcaption>Project Development Session</figcaption>
+                </figure>
+                
+                <figure class="gallery-item">
+                    <img src="gallery2.jpg" alt="Workshop event" loading="lazy">
+                    <figcaption>Annual Engineering Workshop</figcaption>
+                </figure>
+                
+                <!-- Add 10+ gallery items following the same pattern -->
+            </div>
+        </div>
+
+        <!-- Image Modal -->
+        <div id="imageModal" class="modal">
+            <span class="modal-close">&times;</span>
+            <img class="modal-content" id="modalImage">
+            <div id="caption"></div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- Paste your existing footer code here -->
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
