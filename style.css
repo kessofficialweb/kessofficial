@@ -1280,3 +1280,29 @@ body {
     color: var(--accent);
     transform: scale(1.1);
 }
+
+.footer-bottom .copyright {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.7);
+    margin-top: 1.5rem;
+}
+
+/* Existing icon styles (keep these) */
+.footer-column a {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 0.3rem 0;
+}
+
+.footer-column i {
+    width: 20px;
+    text-align: center;
+    font-size: 1.1rem;
+    transition: var(--transition);
+}
+
+.footer-column a:hover i {
+    color: var(--accent);
+    transform: scale(1.1);
+}
