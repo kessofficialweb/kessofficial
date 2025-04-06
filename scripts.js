@@ -219,4 +219,43 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+// PDF Viewer Enhancement
+document.addEventListener('DOMContentLoaded', () => {
+    const pdfViewer = document.querySelector('.pdf-viewer object');
+    
+    // Add PDF navigation controls
+    const addPdfControls = () => {
+        const controls = document.createElement('div');
+        controls.className = 'pdf-nav-controls';
+        controls.innerHTML = `
+            <button class="btn btn-pdf" onclick="zoomIn()">Zoom In</button>
+            <button class="btn btn-pdf" onclick="zoomOut()">Zoom Out</button>
+            <button class="btn btn-pdf" onclick="toggleFullscreen()">Fullscreen</button>
+        `;
+        document.querySelector('.pdf-controls').appendChild(controls);
+    };
 
+    // Zoom functions
+    window.zoomIn = () => {
+        const currentZoom = parseFloat(pdfViewer.style.zoom) || 1;
+        pdfViewer.style.zoom = Math.min(currentZoom + 0.1, 2);
+    };
+
+    window.zoomOut = () => {
+        const currentZoom = parseFloat(pdfViewer.style.zoom) || 1;
+        pdfViewer.style.zoom = Math.max(currentZoom - 0.1, 0.5);
+    };
+
+    window.toggleFullscreen = () => {
+        if (!document.fullscreenElement) {
+            pdfViewer.requestFullscreen().catch(err => {
+                alert(`Error attempting to enable fullscreen: ${err.message}`);
+            });
+        } else {
+            document.exitFullscreen();
+        }
+    };
+
+    // Initialize controls
+    addPdfControls();
+});
