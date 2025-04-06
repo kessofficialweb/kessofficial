@@ -1,0 +1,156 @@
+<!-- internships.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Internships | KESS</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+    <nav class="navbar">
+        <!-- Logo Section -->
+        <div class="header-top">
+            <a href="index.html" class="logo">
+                <img src="assets/Kesscircletransparent.png" 
+                    alt="KESS Logo" class="logo-img">KESS</a>
+              <button class="hamburger">
+                  ☰
+            </button>
+        </div>
+
+        <!-- Combined Navigation -->
+        <div class="header-bottom">
+            <!-- Main Navigation -->
+            <!--ul class="nav-links"></ul>
+
+            <!-- Tabbed Navigation -->
+            <div class="header-tabs">
+                <a href="index.html" class="tab">Home</a>
+                <a href="Events.html" class="tab">Events</a>
+                <a href="projects.html" class="tab">Projects</a>
+                <a href="contact.html" class="tab">Contact</a>
+            </div>
+        </div>
+    </nav>
+    </header>
+
+    <main class="internships-container">
+        <div class="card">
+            <h1>Engineering Internship Opportunities</h1>
+            
+            <!-- Filters -->
+            <div class="filters">
+                <div class="filter-group">
+                    <h3>Filter by Discipline:</h3>
+                    <div class="filter-options">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="mechanical">Mechanical</button>
+                        <button class="filter-btn" data-filter="electrical">Electrical</button>
+                        <button class="filter-btn" data-filter="computer">Computer</button>
+                        <button class="filter-btn" data-filter="civil">Civil</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Internship Listings -->
+            <div class="internship-listings">
+                <!-- Mechanical Engineering -->
+                <article class="internship-card" data-discipline="mechanical">
+                    <div class="company-logo">
+                        <img src="images/ge-logo.png" alt="General Electric Logo">
+                    </div>
+                    <div class="internship-details">
+                        <h2>Mechanical Engineering Intern</h2>
+                        <div class="meta-info">
+                            <span class="company">General Electric</span>
+                            <span class="location">📍 Boston, MA</span>
+                            <span class="deadline">⏳ Deadline: 2024-04-30</span>
+                        </div>
+                        <p class="description">Summer internship focusing on turbine design and thermal systems...</p>
+                        <a href="https://www.ge.com/careers" class="btn btn-apply" target="_blank">Apply Now</a>
+                    </div>
+                </article>
+
+                <!-- Computer Engineering -->
+                <article class="internship-card" data-discipline="computer">
+                    <div class="company-logo">
+                        <img src="images/intel-logo.png" alt="Intel Logo">
+                    </div>
+                    <div class="internship-details">
+                        <h2>Computer Engineering Intern</h2>
+                        <div class="meta-info">
+                            <span class="company">Intel Corporation</span>
+                            <span class="location">📍 Santa Clara, CA</span>
+                            <span class="deadline">⏳ Deadline: 2024-05-15</span>
+                        </div>
+                        <p class="description">Hardware development internship focusing on processor design...</p>
+                        <a href="https://www.intel.com/careers" class="btn btn-apply" target="_blank">Apply Now</a>
+                    </div>
+                </article>
+
+                <!-- Add more internship entries following the same pattern -->
+            </div>
+
+            <!-- Resources Section -->
+            <section class="resources">
+                <h2>Internship Resources</h2>
+                <div class="resource-cards">
+                    <div class="resource-card">
+                        <h3>Application Tips</h3>
+                        <ul>
+                            <li>Resume building workshops</li>
+                            <li>Interview preparation guide</li>
+                            <li>Portfolio recommendations</li>
+                        </ul>
+                    </div>
+                    <div class="resource-card">
+                        <h3>Partner Companies</h3>
+                        <div class="company-logos">
+                            <img src="images/ford-logo.png" alt="Ford">
+                            <img src="images/ibm-logo.png" alt="IBM">
+                            <img src="images/boeing-logo.png" alt="Boeing">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+    <div class="footer-links">
+        <div class="footer-column">
+            <h4>Quick Links</h4>
+            <a href="index.html">Home</a>
+            <a href="Events.html">Events</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-column">
+            <h4>Resources</h4>
+            <a href="constitution.html">Constitution</a>
+            <a href="membershipform.html">membership</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="blog.html">Blog</a>
+            <a href="internships.html">Internships</a>
+        </div>
+        <div class="footer-column">
+            <h4>Connect</h4>
+            <a href="mailto:kess.kab22@gmail.com">📧 Email</a>
+            <a href="https://twitter.com/kess0fficial">🐦 Twitter</a>
+            <a href="https://www.linkedin.com/company/kabale-university-engineering-students-society-kess">💼 LinkedIn</a>
+            <a href="https://instagram.com/kess0fficial">📸 Instagram</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2025 Kabale University Engineering Students Society (KESS)</p>
+    </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
