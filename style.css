@@ -24,9 +24,14 @@ body {
     color: var(--text);
     background: linear-gradient(160deg, #f8f9fa 0%, #e9ecef 100%);
     min-height: 100vh;
-    padding-top: 140px;
+    display: flex;
+    flex-direction: column;
 }
-
+main {
+    flex: 1;
+    margin-top: 140px; /* Header height */
+    width: 100%;
+}
 /* Updated Header Styles */
 .header {
     background: #fff;
@@ -497,9 +502,7 @@ input, textarea, select {
     width: 100vw;
     position: relative;
     left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
+    transform: translateX(-50%);
 }
 
 .footer-content {
@@ -562,6 +565,13 @@ input, textarea, select {
     .footer-column {
         align-items: flex-start;
         text-align: left;
+    }
+    main {
+        margin-top: 110px; /* Adjusted header height */
+    }
+    
+    .footer {
+        padding: 2rem 0;
     }
 }
 
