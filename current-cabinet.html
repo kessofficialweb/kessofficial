@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Leadership | KESS</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/leadership.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <!-- Your existing header code -->
+    </header>
+
+    <main class="current-cabinet-container">
+        <h1 class="page-title">2023-2024 Executive Cabinet</h1>
+        
+        <!-- Cabinet Overview -->
+        <section class="cabinet-overview">
+            <div class="overview-card">
+                <div class="overview-content">
+                    <h2>Leadership Theme: <span>"Engineering Tomorrow"</span></h2>
+                    <div class="stats-grid">
+
+                      <think>
+
+Continuing the current cabinet page code:
+
+```html
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number">12</div>
+                            <div class="stat-label">Members</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">85%</div>
+                            <div class="stat-label">Female Representation</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">4.1</div>
+                            <div class="stat-label">Average GPA</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="overview-image">
+                    <img src="assets/cabinet-group.jpg" alt="2023-2024 KESS Cabinet">
+                </div>
+            </div>
+        </section>
+
+        <!-- Leadership Team -->
+        <section class="leadership-team">
+            <h2>Meet the Team</h2>
+            <div class="filter-controls">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="executive">Executive</button>
+                <button class="filter-btn" data-filter="technical">Technical</button>
+                <button class="filter-btn" data-filter="administration">Administration</button>
+            </div>
+
+            <div class="cabinet-grid">
+                <!-- President -->
+                <article class="leader-card executive" data-department="executive">
+                    <div class="leader-photo">
+                        <img src="assets/leaders/president.jpg" alt="President John Mugisha">
+                        <div class="leader-badge">President</div>
+                    </div>
+                    <div class="leader-info">
+                        <h3>John Mugisha</h3>
+                        <p class="department">Executive Office</p>
+                        <div class="leader-meta">
+                            <span class="major">
+                                <i class="fas fa-graduation-cap"></i>
+                                Mechanical Engineering
+                            </span>
+                            <span class="tenure">
+                                <i class="fas fa-calendar-alt"></i>
+                                2023-Present
+                            </span>
+                        </div>
+                        <div class="leader-bio">
+                            <h4>Key Initiatives:</h4>
+                            <ul>
+                                <li>Industry Partnership Program</li>
+                                <li>Student Innovation Fund</li>
+                                <li>Technical Workshop Series</li>
+                            </ul>
+                        </div>
+                        <div class="leader-contact">
+                            <a href="mailto:president@kess.ac.ug" class="contact-link">
+                                <i class="fas fa-envelope"></i>
+                                Contact
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Vice President -->
+                <article class="leader-card executive" data-department="executive">
+                    <div class="leader-photo">
+                        <img src="assets/leaders/vp.jpg" alt="Vice President Sarah Nalwoga">
+                        <div class="leader-badge">Vice President</div>
+                    </div>
+                    <div class="leader-info">
+                        <h3>Sarah Nalwoga</h3>
+                        <p class="department">Executive Office</p>
+                        <div class="leader-meta">
+                            <span class="major">
+                                <i class="fas fa-graduation-cap"></i>
+                                Electrical Engineering
+                            </span>
+                            <span class="tenure">
+                                <i class="fas fa-calendar-alt"></i>
+                                2023-Present
+                            </span>
+                        </div>
+                        <div class="leader-bio">
+                            <h4>Key Initiatives:</h4>
+                            <ul>
+                                <li>Membership Growth Strategy</li>
+                                <li>Alumni Relations Program</li>
+                                <li>Leadership Training</li>
+                            </ul>
+                        </div>
+                        <div class="leader-contact">
+                            <a href="mailto:vp@kess.ac.ug" class="contact-link">
+                                <i class="fas fa-envelope"></i>
+                                Contact
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Add more leader cards -->
+            </div>
+        </section>
+
+        <!-- Cabinet Achievements -->
+        <section class="achievements">
+            <h2>Current Term Achievements</h2>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <i class="fas fa-handshake achievement-icon"></i>
+                    <h3>15+ Industry Partnerships</h3>
+                    <p>Established collaborations with leading engineering firms</p>
+                </div>
+                <div class="achievement-card">
+                    <i class="fas fa-users achievement-icon"></i>
+                    <h3>40% Membership Growth</h3>
+                    <p>Increased active members to 500+ students</p>
+                </div>
+                <!-- Add more achievements -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <!-- Your existing footer -->
+    </footer>
+
+    <script src="js/current-cabinet.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+```
+
+**css/leadership.css additions:**
+```css
+/* Current Cabinet Styles */
+.current-cabinet-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.cabinet-overview .overview-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 1rem;
+    background: var(--neutral);
+    border-radius: 12px;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.overview-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Filter Controls */
+.filter-controls {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+}
+
+.filter-btn {
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--accent);
+    border-radius: 20px;
+    background: transparent;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.filter-btn.active {
+    background: var(--accent);
+    color: white;
+}
+
+/* Leader Cards */
+.leader-card {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 2rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.leader-photo {
+    position: relative;
+    height: 250px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.leader-badge {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(43,45,66,0.9);
+    color: white;
+    padding: 0.5rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+.leader-meta {
+    display: flex;
+    gap: 1rem;
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.leader-contact {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.contact-link, .social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: var(--transition);
+}
+
+.contact-link {
+    background: var(--accent);
+    color: white;
+}
+
+.social-link {
+    background: var(--neutral);
+    color: var(--primary);
+}
+
+/* Achievements Grid */
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.achievement-card {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.achievement-icon {
+    font-size: 2.5rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .cabinet-overview .overview-card {
+        grid-template-columns: 1fr;
+    }
+    
+    .leader-card {
+        grid-template-columns: 1fr;
+    }
+    
+    .leader-photo {
+        height: 200px;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
+```
+
+**js/current-cabinet.js:**
+```javascript
+document.addEventListener('DOMContentLoaded', () => {
+    // Filter functionality
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const leaderCards = document.querySelectorAll('.leader-card');
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            
+            const filter = btn.dataset.filter;
+            
+            leaderCards.forEach(card => {
+                if(filter === 'all' || card.classList.contains(filter)) {
+                    card.style.display = 'grid';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+
+    // Leader card animations
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting) {
+                entry.target.style.opacity = 1;
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, { threshold: 0.1 });
+
+    leaderCards.forEach(card => {
+        card.style.opacity = 0;
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = 'all 0.4s ease-out';
+        observer.observe(card);
+    });
+});
+```
+
+This implementation features:
+1. Interactive leadership filtering
+2. Detailed member profiles
+3. Achievement metrics
+4. Responsive design
+5. Contact functionality
+6. Department categorization
+7. Performance statistics
+8. Animated transitions
+9. Social media integration
+10. Mobile optimization
+
+Key components:
+- Department-based filtering
+- Leadership achievement tracking
+- Contact methods for each leader
+- Visual statistics display
+- Responsive image handling
+- Performance animations
+- Clear information hierarchy
+- Accessibility features
+- SEO-friendly markup
+
+To implement:
+1. Create `/assets/leaders/` directory
+2. Add leadership photos (recommended size: 400x500px)
+3. Update leader information and initiatives
+4. Add actual contact links
+5. Include real achievement metrics
+
+The code maintains your site's visual identity while providing comprehensive leadership information.
