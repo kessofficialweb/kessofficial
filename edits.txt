@@ -1,5 +1,288 @@
 
 
+Here's a comprehensive **elections.html** with process visualization:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KESS Elections | Kabale University Engineering Society</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/elections.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <!-- Your existing header -->
+    </header>
+
+    <main class="elections-container">
+        <h1 class="page-title">KESS Election Process</h1>
+        
+        <!-- Election Timeline -->
+        <section class="election-timeline">
+            <h2>2024 Election Calendar</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">March 1</div>
+                    <div class="timeline-content">
+                        <h3>Nominations Open</h3>
+                        <p>Submission of candidate petitions begins</p>
+                        <ul class="timeline-details">
+                            <li><i class="fas fa-file-signature"></i> 50 member signatures required</li>
+                            <li><i class="fas fa-clock"></i> Deadline: March 15</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">March 20</div>
+                    <div class="timeline-content">
+                        <h3>Candidate Screening</h3>
+                        <p>Electoral committee reviews applications</p>
+                        <div class="requirements">
+                            <h4>Requirements:</h4>
+                            <ul>
+                                <li>Minimum 2.8 GPA</li>
+                                <li>Active membership status</li>
+                                <li>No disciplinary record</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Add more timeline items -->
+            </div>
+        </section>
+
+        <!-- Election Rules -->
+        <section class="election-rules">
+            <h2>Voting Regulations</h2>
+            <div class="rules-grid">
+                <div class="rule-card">
+                    <i class="fas fa-user-check"></i>
+                    <h3>Eligibility</h3>
+                    <ul>
+                        <li>Registered engineering student</li>
+                        <li>Paid membership fees</li>
+                        <li>Valid student ID</li>
+                    </ul>
+                </div>
+                
+                <div class="rule-card">
+                    <i class="fas fa-vote-yea"></i>
+                    <h3>Voting Process</h3>
+                    <ul>
+                        <li>Online ballot system</li>
+                        <li>Two-factor authentication</li>
+                        <li>72-hour voting window</li>
+                    </ul>
+                </div>
+                
+                <!-- Add more rule cards -->
+            </div>
+        </section>
+
+        <!-- Election Archive -->
+        <section class="election-archive">
+            <h2>Past Election Results</h2>
+            <div class="results-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Year</th>
+                            <th>President</th>
+                            <th>Voter Turnout</th>
+                            <th>Results</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2023</td>
+                            <td>John Mugisha</td>
+                            <td>68%</td>
+                            <td><a href="#">View Details</a></td>
+                        </tr>
+                        <!-- Add more rows -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <!-- Your existing footer -->
+    </footer>
+
+    <script src="js/elections.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+```
+
+**css/elections.css**
+```css
+/* Elections Page Styles */
+.elections-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.page-title {
+    text-align: center;
+    color: var(--primary);
+    margin-bottom: 3rem;
+}
+
+/* Timeline Styles */
+.timeline {
+    position: relative;
+    padding-left: 30px;
+    margin: 2rem 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--accent);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+    padding-left: 2rem;
+}
+
+.timeline-date {
+    position: absolute;
+    left: -85px;
+    top: 0;
+    background: var(--accent);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+.timeline-content {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+/* Rules Grid */
+.rules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.rule-card {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.rule-card i {
+    font-size: 2rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+/* Results Table */
+.results-table {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--neutral);
+}
+
+th {
+    background: var(--primary);
+    color: white;
+}
+
+tr:hover {
+    background: var(--neutral);
+}
+
+@media (max-width: 768px) {
+    .timeline-date {
+        position: static;
+        margin-bottom: 1rem;
+    }
+    
+    .timeline::before {
+        left: 20px;
+    }
+    
+    .timeline-item {
+        padding-left: 0;
+        margin-left: 40px;
+    }
+}
+```
+
+**js/elections.js**
+```javascript
+// Initialize timeline animations
+document.addEventListener('DOMContentLoaded', () => {
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting) {
+                entry.target.style.opacity = 1;
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    timelineItems.forEach(item => {
+        item.style.opacity = 0;
+        item.style.transform = 'translateY(20px)';
+        item.style.transition = 'all 0.4s ease-out';
+        observer.observe(item);
+    });
+});
+```
+
+This implementation features:
+1. Interactive timeline with key dates
+2. Responsive rule cards
+3. Scrollable results table
+4. Animated content on scroll
+5. Mobile-optimized layout
+6. Clear visual hierarchy
+7. Compliance with your existing design system
+8. Accessible markup
+9. Smooth transitions
+10. Detailed process documentation
+
+The code maintains consistency with your site's header/footer and color scheme while providing an engaging way to present election information.
+
 
 
 **1. leadership.html**
