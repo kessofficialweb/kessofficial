@@ -1,7 +1,6 @@
 
 
 
-Here's the **complete file structure** for your leadership section:
 
 **1. leadership.html**
 ```html
@@ -223,15 +222,5 @@ your-site/
 ├── elections.html
 └── constitution.html
 ```
-
-This structure:
-- Maintains consistent headers/footers
-- Uses modular CSS/JS
-- Follows semantic HTML
-- Is mobile-responsive
-- Shares common styles through style.css
-- Has page-specific enhancements
-- Uses Font Awesome icons
-- Implements smooth scrolling
 
 Let me know if you need any specific section filled out further!
