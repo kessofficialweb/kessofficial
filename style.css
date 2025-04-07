@@ -565,13 +565,20 @@ input, textarea, select {
 }
 /* Footer Styles */
 footer {
-    background: rgba(59, 68, 75,1);
+    background: rgba(43, 45, 66,1);
     color: white;
     padding: 4rem 2rem 2rem;
     margin-top: 4rem;
     width: 100%;
     position: relative;
     left: 0;
+    --primary: #2B2D42;
+    --accent: #4A90E2;
+    --neutral: #F0F4F8;
+    --text: #2B2D42;
+    --text-light: #6c757d;
+    --success: #4CAF50;
+    --warning: #FFC107;
 }
 
 .footer-links {
