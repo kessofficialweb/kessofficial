@@ -531,3 +531,49 @@ document.addEventListener('DOMContentLoaded', () => {
     color: #721c24;
     display: block;
 }
+document.getElementById('membershipForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const submitBtn = this.querySelector('button[type="submit"]');
+    const submitText = submitBtn.querySelector('.submit-text');
+    const spinner = submitBtn.querySelector('.spinner');
+    const formMessage = document.getElementById('formMessage');
+    
+    // Show loading state
+    submitText.textContent = 'Submitting...';
+    spinner.classList.remove('hidden');
+    submitBtn.disabled = true;
+    
+    // Prepare email parameters
+    const templateParams = {
+        fullName: this.fullName.value,
+        email: this.email.value,
+        department: this.department.value,
+        year: this.year.value,
+        message: this.message.value
+    };
+    
+    // Send email
+    emailjs.send('ID:service_8a8tkh2', 'ID:template_ppn4tco', templateParams)
+        .then(() => {
+            formMessage.textContent = 'Registration successful! We will contact you shortly.';
+            formMessage.classList.add('success');
+            this.reset();
+        })
+        .catch((error) => {
+            formMessage.textContent = 'Error submitting form. Please try again or contact us directly.';
+            formMessage.classList.add('error');
+            console.error('Form submission error:', error);
+        })
+        .finally(() => {
+            submitText.textContent = 'Submit Registration';
+            spinner.classList.add('hidden');
+            submitBtn.disabled = false;
+            formMessage.classList.remove('hidden');
+            
+            // Hide message after 5 seconds
+            setTimeout(() => {
+                formMessage.classList.add('hidden');
+            }, 5000);
+        });
+});
