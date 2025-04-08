@@ -1992,3 +1992,58 @@ tr:hover {
     color: #721c24;
     display: block;
 }
+/* Discussion Section */
+.discussion-section {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+.comment-form {
+    margin-bottom: 2rem;
+}
+
+#commentInput {
+    width: 100%;
+    height: 100px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 2px solid var(--neutral);
+    border-radius: 8px;
+    resize: vertical;
+}
+
+.comments-container {
+    background: white;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.comment-card {
+    padding: 1rem;
+    margin: 1rem 0;
+    border-bottom: 1px solid var(--neutral);
+}
+
+.comment-author {
+    font-weight: 500;
+    color: var(--primary);
+}
+
+.comment-timestamp {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    margin-left: 1rem;
+}
+
+.comment-content {
+    margin: 0.5rem 0;
+    line-height: 1.6;
+}
+
+.error-message {
+    color: #dc3545;
+    margin-top: 0.5rem;
+    display: none;
+}
