@@ -490,47 +490,7 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(card);
     });
 });
-/* Loading spinner */
-.spinner {
-    width: 24px;
-    height: 24px;
-    border: 3px solid rgba(255,255,255,0.3);
-    border-radius: 50%;
-    border-top-color: #fff;
-    animation: spin 1s ease-in-out infinite;
-    display: none;
-}
 
-.spinner.hidden {
-    display: none;
-}
-
-.spinner.visible {
-    display: inline-block;
-}
-
-@keyframes spin {
-    to { transform: rotate(360deg); }
-}
-
-#formMessage {
-    padding: 1rem;
-    margin: 1rem 0;
-    border-radius: 8px;
-    display: none;
-}
-
-#formMessage.success {
-    background: #d4edda;
-    color: #155724;
-    display: block;
-}
-
-#formMessage.error {
-    background: #f8d7da;
-    color: #721c24;
-    display: block;
-}
 document.getElementById('membershipForm').addEventListener('submit', function(e) {
     e.preventDefault();
     
