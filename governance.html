@@ -1,137 +1,148 @@
-<think>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Governance Structure | KESS</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/governance.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+    <nav class="navbar">
+        <!-- Logo Section -->
+        <div class="header-top">
+            <a href="index.html" class="logo"><img src="assets/Kesscircletransparent.png" 
+                    alt="KESS Logo" class="logo-img">KESS</a>
+              <button class="hamburger">
+                  ☰
+            </button>
+        </div>
 
-Continuing the current cabinet page code:
+        <!-- Combined Navigation -->
+        <div class="header-bottom">
+            <!-- Main Navigation -->
+            <!--ul class="nav-links"></ul>
 
-```html
-                    <div class="stats-grid">
-                        <div class="stat-item">
-                            <div class="stat-number">12</div>
-                            <div class="stat-label">Members</div>
+            <!-- Tabbed Navigation -->
+            <div class="header-tabs">
+                <a href="index.html" class="tab">Home</a>
+                <a href="Events.html" class="tab">Events</a>
+                <a href="projects.html" class="tab">Projects</a>
+                <a href="contact.html" class="tab">Contact</a>
+            </div>
+        </div>
+    </nav>
+    </header>
+
+    <main class="governance-container">
+        <h1 class="page-title">KESS Governance Structure</h1>
+        
+        <!-- Organizational Chart -->
+        <section class="org-chart">
+            <h2>Organizational Hierarchy</h2>
+            <div class="chart-container">
+                <!-- Executive Branch -->
+                <div class="chart-node executive">
+                    <div class="node-content">
+                        <i class="fas fa-users-crown"></i>
+                        <h3>Executive Council</h3>
+                        <button class="node-details-btn" data-target="executive-details">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <div class="node-children">
+                        <!-- President -->
+                        <div class="chart-node president">
+                            <div class="node-content">
+                                <i class="fas fa-user-tie"></i>
+                                <h4>President</h4>
+                            </div>
                         </div>
-                        <div class="stat-item">
-                            <div class="stat-number">85%</div>
-                            <div class="stat-label">Female Representation</div>
+                        
+                        <!-- Vice President -->
+                        <div class="chart-node vice-president">
+                            <div class="node-content">
+                                <i class="fas fa-user-tie"></i>
+                                <h4>Vice President</h4>
+                            </div>
                         </div>
-                        <div class="stat-item">
-                            <div class="stat-number">4.1</div>
-                            <div class="stat-label">Average GPA</div>
+                        
+                        <!-- Secretary General -->
+                        <div class="chart-node secretary">
+                            <div class="node-content">
+                                <i class="fas fa-file-alt"></i>
+                                <h4>Secretary General</h4>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="overview-image">
-                    <img src="assets/cabinet-group.jpg" alt="2023-2024 KESS Cabinet">
+
+                <!-- Technical Branch -->
+                <div class="chart-node technical">
+                    <div class="node-content">
+                        <i class="fas fa-microchip"></i>
+                        <h3>Technical Committee</h3>
+                        <button class="node-details-btn" data-target="technical-details">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <div class="node-children">
+                        <!-- Committee Chairs -->
+                    </div>
                 </div>
+
+                <!-- Add more branches -->
             </div>
         </section>
 
-        <!-- Leadership Team -->
-        <section class="leadership-team">
-            <h2>Meet the Team</h2>
-            <div class="filter-controls">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="executive">Executive</button>
-                <button class="filter-btn" data-filter="technical">Technical</button>
-                <button class="filter-btn" data-filter="administration">Administration</button>
-            </div>
-
-            <div class="cabinet-grid">
-                <!-- President -->
-                <article class="leader-card executive" data-department="executive">
-                    <div class="leader-photo">
-                        <img src="assets/leaders/president.jpg" alt="President John Mugisha">
-                        <div class="leader-badge">President</div>
+        <!-- Governance Documents -->
+        <section class="documents">
+            <h2>Governing Documents</h2>
+            <div class="document-cards">
+                <article class="doc-card">
+                    <div class="doc-icon">
+                        <i class="fas fa-file-contract"></i>
                     </div>
-                    <div class="leader-info">
-                        <h3>John Mugisha</h3>
-                        <p class="department">Executive Office</p>
-                        <div class="leader-meta">
-                            <span class="major">
-                                <i class="fas fa-graduation-cap"></i>
-                                Mechanical Engineering
-                            </span>
-                            <span class="tenure">
-                                <i class="fas fa-calendar-alt"></i>
-                                2023-Present
-                            </span>
-                        </div>
-                        <div class="leader-bio">
-                            <h4>Key Initiatives:</h4>
-                            <ul>
-                                <li>Industry Partnership Program</li>
-                                <li>Student Innovation Fund</li>
-                                <li>Technical Workshop Series</li>
-                            </ul>
-                        </div>
-                        <div class="leader-contact">
-                            <a href="mailto:president@kess.ac.ug" class="contact-link">
-                                <i class="fas fa-envelope"></i>
-                                Contact
-                            </a>
-                            <a href="#" class="social-link">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                        </div>
+                    <div class="doc-content">
+                        <h3>Constitution</h3>
+                        <p>Primary governing document establishing KESS structure</p>
+                        <a href="constitution.pdf" class="doc-link" download>
+                            <i class="fas fa-download"></i>
+                            Download PDF
+                        </a>
                     </div>
                 </article>
-
-                <!-- Vice President -->
-                <article class="leader-card executive" data-department="executive">
-                    <div class="leader-photo">
-                        <img src="assets/leaders/vp.jpg" alt="Vice President Sarah Nalwoga">
-                        <div class="leader-badge">Vice President</div>
+                
+                <article class="doc-card">
+                    <div class="doc-icon">
+                        <i class="fas fa-balance-scale"></i>
                     </div>
-                    <div class="leader-info">
-                        <h3>Sarah Nalwoga</h3>
-                        <p class="department">Executive Office</p>
-                        <div class="leader-meta">
-                            <span class="major">
-                                <i class="fas fa-graduation-cap"></i>
-                                Electrical Engineering
-                            </span>
-                            <span class="tenure">
-                                <i class="fas fa-calendar-alt"></i>
-                                2023-Present
-                            </span>
-                        </div>
-                        <div class="leader-bio">
-                            <h4>Key Initiatives:</h4>
-                            <ul>
-                                <li>Membership Growth Strategy</li>
-                                <li>Alumni Relations Program</li>
-                                <li>Leadership Training</li>
-                            </ul>
-                        </div>
-                        <div class="leader-contact">
-                            <a href="mailto:vp@kess.ac.ug" class="contact-link">
-                                <i class="fas fa-envelope"></i>
-                                Contact
-                            </a>
-                            <a href="#" class="social-link">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                        </div>
+                    <div class="doc-content">
+                        <h3>By-Laws</h3>
+                        <p>Detailed operational procedures and regulations</p>
+                        <a href="bylaws.pdf" class="doc-link" download>
+                            <i class="fas fa-download"></i>
+                            Download PDF
+                        </a>
                     </div>
                 </article>
-
-                <!-- Add more leader cards -->
             </div>
         </section>
 
-        <!-- Cabinet Achievements -->
-        <section class="achievements">
-            <h2>Current Term Achievements</h2>
-            <div class="achievements-grid">
-                <div class="achievement-card">
-                    <i class="fas fa-handshake achievement-icon"></i>
-                    <h3>15+ Industry Partnerships</h3>
-                    <p>Established collaborations with leading engineering firms</p>
+        <!-- Governance Timeline -->
+        <section class="timeline">
+            <h2>Governance Evolution</h2>
+            <div class="timeline-container">
+                <div class="timeline-event">
+                    <div class="event-date">2023</div>
+                    <div class="event-content">
+                        <h3>Constitutional Amendment</h3>
+                        <p>Revised leadership structure to include technical committees</p>
+                    </div>
                 </div>
-                <div class="achievement-card">
-                    <i class="fas fa-users achievement-icon"></i>
-                    <h3>40% Membership Growth</h3>
-                    <p>Increased active members to 500+ students</p>
-                </div>
-                <!-- Add more achievements -->
+                <!-- Add more timeline events -->
             </div>
         </section>
     </main>
