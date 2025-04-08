@@ -7,6 +7,13 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+    (function() {
+        emailjs.init('YOUR_USER_ID'); // Initialize with your EmailJS user ID
+    })();
+</script>
 </head>
 <body>
     <!-- Header (Same as other pages) -->
@@ -38,12 +45,13 @@
     </header>
 
     <main class="registration-container">
+        
         <div class="card form-card">
             <h1>Student Membership</h1>
             <p>You can become a member of KESS by filling the form below.</>
-            <form id="registrationForm" action="" method="POST">
+            <form id="membershipForm" action="" method="POST">
                 <!-- Personal Information -->
-                <div class="form-section">
+                <div class="form-group">
                     <h3>Personal Information</h3>
                     <div class="form-group">
                         <label for="fullName">Full Name</label>
@@ -110,10 +118,11 @@
                 </div>
 
                 <div class="form-actions">
-                    <button type="submit" class="btn btn-primary">Submit Registration</button>
+                    <button type="submit" class="btn btn-primary">
+                        <span class="submit-text">Submit Registration</span></button>
                 </div>
             </form>
-            <div id="formSuccess" class="form-success">Registration Submitted Successfully! Please check your email to finalize your registration</div>
+            <div id="formMessage" class="hidden">Registration Submitted Successfully! Please check your email to finalize your registration</div>
         </div>
     </main>
 
