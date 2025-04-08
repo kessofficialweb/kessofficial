@@ -537,6 +537,19 @@ document.getElementById('membershipForm').addEventListener('submit', function(e)
             }, 5000);
         });
 });
+
+emailjs.sendForm('service_8a8tkh2', 'template_ppn4tco', '#myForm').then(
+  function (response) {
+    console.log('SUCCESS!', response.status, response.text);
+  },
+  function (err) {
+    console.log('FAILED...', err);
+  },
+);
+
+
+
+
 // Initialize comments array
 let comments = JSON.parse(localStorage.getItem('comments')) || [];
 
