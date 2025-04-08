@@ -537,3 +537,60 @@ document.getElementById('membershipForm').addEventListener('submit', function(e)
             }, 5000);
         });
 });
+// Initialize comments array
+let comments = JSON.parse(localStorage.getItem('comments')) || [];
+
+// Load existing comments
+function loadComments() {
+    const container = document.getElementById('commentsContainer');
+    container.innerHTML = '';
+    
+    comments.forEach(comment => {
+        const commentHTML = `
+            <div class="comment-card">
+                <div class="comment-header">
+                    <span class="comment-author">${comment.author}</span>
+                    <span class="comment-timestamp">${comment.timestamp}</span>
+                </div>
+                <p class="comment-content">${comment.content}</p>
+            </div>
+        `;
+        container.insertAdjacentHTML('afterbegin', commentHTML);
+    });
+}
+
+// Post new comment
+document.getElementById('postComment').addEventListener('click', () => {
+    const commentInput = document.getElementById('commentInput');
+    const errorMessage = document.querySelector('.error-message');
+    const content = commentInput.value.trim();
+
+    if (!content) {
+        errorMessage.textContent = 'Please write a comment before posting.';
+        errorMessage.style.display = 'block';
+        return;
+    }
+
+    const newComment = {
+        author: 'Anonymous Student', // Replace with user system if available
+        content: sanitizeInput(content),
+        timestamp: new Date().toLocaleString()
+    };
+
+    comments.push(newComment);
+    localStorage.setItem('comments', JSON.stringify(comments));
+    
+    loadComments();
+    commentInput.value = '';
+    errorMessage.style.display = 'none';
+});
+
+// Basic input sanitization
+function sanitizeInput(str) {
+    const div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+}
+
+// Initial load
+document.addEventListener('DOMContentLoaded', loadComments);
