@@ -1,0 +1,140 @@
+/* Governance Page Styles */
+.governance-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Organizational Chart */
+.org-chart {
+    margin: 4rem 0;
+}
+
+.chart-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+    margin: 2rem 0;
+}
+
+.chart-node {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    position: relative;
+    min-width: 250px;
+}
+
+.node-content {
+    text-align: center;
+    position: relative;
+}
+
+.node-content i {
+    font-size: 2rem    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+.node-children {
+    display: none;
+    margin-top: 1rem;
+    padding-left: 2rem;
+    border-left: 3px solid var(--neutral);
+}
+
+.node-details-btn {
+    position: absolute;
+    top: 10px;
+    right: 10;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--text-light);
+}
+
+/* Document Cards */
+.document-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.doc-card {
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.doc-icon {
+    font-size: 2rem;
+    color: var(--accent);
+}
+
+.doc-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+
+/* Timeline */
+.timeline-container {
+    position: relative;
+    padding-left: 30px;
+    margin: 2rem 0;
+}
+
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--accent);
+}
+
+.timeline-event {
+    position: relative;
+    margin-bottom: 2rem;
+    padding-left: 2rem;
+}
+
+.event {
+    position: absolute;
+    left: -85px;
+    top: 0;
+    background: var(--accent);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .chart-node {
+        width 100%;
+    }
+    
+    .event-date {
+        position: static;
+        margin-bottom: 1rem;
+    }
+    
+    .timeline-container::before {
+        left: 20px;
+    }
+    
+    .timeline-event {
+        padding-left: 0;
+        margin-left: 40px;
+    }
+}
