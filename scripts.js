@@ -514,7 +514,7 @@ document.getElementById('membershipForm').addEventListener('submit', function(e)
     };
     
     // Send email
-    emailjs.send('ID:service_8a8tkh2', 'ID:template_ppn4tco', templateParams)
+    emailjs.send('service_8a8tkh2', 'template_ppn4tco', templateParams)
         .then(() => {
             formMessage.textContent = 'Registration successful! We will contact you shortly.';
             formMessage.classList.add('success');
