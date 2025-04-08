@@ -401,10 +401,12 @@
     <section class="comments-section">
         <h2>Student Discussions</h2>
         <form class="comment-form">
-            <textarea rows="3" placeholder="Join the discussion..." required></textarea>
-            <button class="btn" type="submit">Post Comment</button>
+            <textarea id="commentInput" rows="3" placeholder="Join the discussion..." required></textarea>
+            <button id= "postComment" class="btn" type="submit">Post Comment</button>
         </form>
-        <div class="comment-list">
+        <div id="commentsContainer" class="comments-container">
+        <!-- Existing comments will be loaded here -->
+            <div class="comment-list">
             <div class="comment-card compact">
             <div class="comment-header">
             <h4 class="comment-author">Mark</h4>
@@ -413,6 +415,7 @@
     <p class="comment-excerpt">Great initiative!</p>
             </div>
             <!-- More comments -->
+            </div>
         </div>
     </section>
 
