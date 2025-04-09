@@ -502,6 +502,9 @@ emailjs.init('sVMQfQPoQiX4S6UFK', {
 });
 document.getElementById('membershipForm').addEventListener('submit', function(e) {
     e.preventDefault();
+
+    const form = this;
+    const formData = new FormData(form);
     
     const submitBtn = this.querySelector('button[type="submit"]');
     const submitText = submitBtn.querySelector('.submit-text');
@@ -523,7 +526,7 @@ document.getElementById('membershipForm').addEventListener('submit', function(e)
     };
     
     // Send email
-    emailjs.send('service_8a8tkh2', 'template_ppn4tco', templateParams)
+    emailjs.sendForm('service_8a8tkh2', 'template_ppn4tco', form)        
         .then(() => {
             formMessage.textContent = 'Registration successful! We will contact you shortly.';
             formMessage.classList.add('success');
