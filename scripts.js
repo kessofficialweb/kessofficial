@@ -491,6 +491,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+
+// Update initialization in your script
+emailjs.init('sVMQfQPoQiX4S6UFK', {
+    publicKey: 'sVMQfQPoQiX4S6UFK', // New EmailJS requirement
+    blockHeadless: true,
+    limitRate: {
+        throttle: 3000, // 3 seconds
+    }
+});
 document.getElementById('membershipForm').addEventListener('submit', function(e) {
     e.preventDefault();
     
