@@ -1,6 +1,0 @@
-Name images sequentially (gallery1.jpg, gallery2.jpg, etc.)
-Optimize images for web (800-1200px width)
-Add 10+ gallery items following the same pattern
-Keep image dimensions consistent (aspect ratio 4:3 recommended)
-Add loading="lazy" attribute to all images
-Ensure all images have proper alt text
