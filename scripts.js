@@ -557,8 +557,9 @@ emailjs.sendForm('service_8a8tkh2', 'template_ppn4tco', '#myForm').then(
     console.log('FAILED...', err);
   },
 );
-*/
 
+
+//-----------------------------------------------------------------------------
 // First, initialize EmailJS (place this at the top of your script)
 emailjs.init("sVMQfQPoQiX4S6UFK"); // Replace with your actual public key
 
@@ -603,7 +604,68 @@ document.getElementById('registrationForm').addEventListener('submit', function(
         });
 });
 
+*/
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('membershipForm');
+    
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get the button and its elements
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const submitText = submitBtn.querySelector('.submit-text');
+            const formMessage = document.getElementById('formMessage');
+            
+            // Disable button
+            submitBtn.disabled = true;
+            submitText.textContent = 'Sending...';
+            
+            // Prepare template parameters to match your template variables
+            const templateParams = {
+                name: form.fullName.value,
+                fullName: form.fullName.value,
+                email: form.email.value,
+                department: form.program.value, // Using program field as department
+                year: form.year.value,
+                message: `
+                    Student ID: ${form.studentId.value}
+                    Phone: ${form.phone.value}
+                    Address: ${form.address.value}
+                    Gender: ${form.gender.value}
+                    Date of Birth: ${form.dob.value}
+                `,
+                time: new Date().toLocaleString()
+            };
 
+            // Send email
+            emailjs.send('service_8a8tkh2', 'template_ppn4tco', templateParams)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    formMessage.textContent = 'Registration successful! We will contact you shortly.';
+                    formMessage.classList.remove('hidden');
+                    formMessage.classList.add('success');
+                    form.reset();
+                })
+                .catch(function(error) {
+                    console.log('FAILED...', error);
+                    formMessage.textContent = 'Failed to submit form. Please try again.';
+                    formMessage.classList.remove('hidden');
+                    formMessage.classList.add('error');
+                })
+                .finally(function() {
+                    // Reset button state
+                    submitBtn.disabled = false;
+                    submitText.textContent = 'Submit Registration';
+                    
+                    // Hide message after 5 seconds
+                    setTimeout(() => {
+                        formMessage.classList.add('hidden');
+                    }, 5000);
+                });
+        });
+    }
+});
 
 
 
