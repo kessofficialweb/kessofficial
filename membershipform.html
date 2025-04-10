@@ -11,20 +11,14 @@
 
 <script>
     (function() {
-        emailjs.init('Tow0fElZ0nWqtRXNK_QYV'); // Initialize with your EmailJS user ID
+        emailjs.init('sVMQfQPoQiX4S6UFK'); // Initialize with your EmailJS user ID
     })();
 </script>
     <script
   type="text/javascript"
   src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
 </script>
-<script type="text/javascript">
-  (function () {
-    emailjs.init({
-      publicKey: 'Tow0fElZ0nWqtRXNK_QYV',
-    });
-  })();
-</script>
+
 </head>
 <body>
     <!-- Header (Same as other pages) -->
@@ -60,7 +54,7 @@
         <div class="card form-card">
             <h1>Student Membership</h1>
             <p>You can become a member of KESS by filling the form below.</>
-            <form id="membershipForm" onsubmit="return false;">
+            <form id="membershipForm">
                 <!-- Personal Information -->
                 <div class="form-group">
                     <h3>Personal Information</h3>
@@ -132,7 +126,14 @@
                     <button type="submit" class="btn btn-primary">
                         <span class="submit-text">Submit Registration</span></button>
                 </div>
+                
             </form>
+            <div class="form-actions">
+    <button type="submit" class="btn btn-primary">
+        <span class="submit-text">Submit Registration</span>
+        <span class="spinner hidden">⌛</span>
+    </button>
+</div>
             <div id="formMessage" class="hidden"></div>
         
         </div>
