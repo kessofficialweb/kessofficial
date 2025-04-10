@@ -583,7 +583,7 @@ document.getElementById('registrationForm').addEventListener('submit', function(
     };
 
     // Send email using EmailJS
-    emailjs.send('service_8a8tkh2', 'template_ppn4tco', templateParams)
+    emailjs.sendForm('service_8a8tkh2', 'template_ppn4tco', templateParams)//added 'form'
         .then(function(response) {
             console.log('SUCCESS!', response.status, response.text);
             // Show success message
