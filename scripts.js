@@ -490,8 +490,7 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(card);
     });
 });
-
-
+/*
 // Update initialization in your script
 emailjs.init('sVMQfQPoQiX4S6UFK', {
     publicKey: 'sVMQfQPoQiX4S6UFK', // New EmailJS requirement
@@ -558,6 +557,52 @@ emailjs.sendForm('service_8a8tkh2', 'template_ppn4tco', '#myForm').then(
     console.log('FAILED...', err);
   },
 );
+*/
+
+// First, initialize EmailJS (place this at the top of your script)
+emailjs.init("sVMQfQPoQiX4S6UFK"); // Replace with your actual public key
+
+// Then modify your form submission code like this
+document.getElementById('registrationForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Show loading state if you have one
+    const submitBtn = this.querySelector('button[type="submit"]');
+    if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+    }
+
+    // Prepare template parameters
+    const templateParams = {
+        to_name: this.fullName.value,
+        from_name: this.email.value,
+        department: this.department.value,
+        year: this.year.value,
+        message: this.message.value
+    };
+
+    // Send email using EmailJS
+    emailjs.send('service_8a8tkh2', 'template_ppn4tco', templateParams)
+        .then(function(response) {
+            console.log('SUCCESS!', response.status, response.text);
+            // Show success message
+            document.getElementById('formSuccess').style.display = 'block';
+            e.target.reset();
+        }, function(error) {
+            console.log('FAILED...', error);
+            // Show error message
+            alert('Failed to send message. Please try again.');
+        })
+        .finally(() => {
+            // Reset button state
+            if (submitBtn) {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Submit Registration';
+            }
+        });
+});
+
 
 
 
