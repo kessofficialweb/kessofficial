@@ -138,3 +138,27 @@
         margin-left: 40px;
     }
 }
+/* Add to governance.css */
+.chart-node .node-content p {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-top: 0.5rem;
+}
+
+.chart-node.welfare .node-content {
+    background: #f8f9fa;
+}
+
+.chart-node.operations .node-content {
+    background: #e9ecef;
+}
+
+.timeline-event h3 {
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+}
+
+.timeline-event p {
+    line-height: 1.6;
+    color: var(--text);
+}
