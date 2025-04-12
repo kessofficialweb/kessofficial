@@ -452,3 +452,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// Add to your main JS file
+window.addEventListener('scroll', function() {
+    const scrollButton = document.querySelector('.back-to-top');
+    if (window.scrollY > 300) {
+        scrollButton.classList.add('show');
+    } else {
+        scrollButton.classList.remove('show');
+    }
+});
+
+document.querySelector('.back-to-top').addEventListener('click', function(e) {
+    e.preventDefault();
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
