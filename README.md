@@ -1,6 +1,6 @@
 
 # Kabale University Engineering Students Society (KESS).
-# [Official Website](https://kess0fficial.github.io/kess0fficial/)
+# [Official Website](http://kessofficialweb.github.io/kessofficial/)
 
 
 Official website for the Engineering Students Society at Kabale University. Built with modern web technologies and designed for optimal user experience.
@@ -54,7 +54,7 @@ Official website for the Engineering Students Society at Kabale University. Buil
 ## Deployment
 
 Automatically deployed via GitHub Pages:
-- Live URL: `https://kess0fficial.github.io/kess0fficial/`
+- Live URL: `https://github.com/kessofficialweb/kessofficial/`
 - Branch: `main`
 - Folder: `/ (root)`
 
@@ -82,4 +82,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ## Contact
 
 KESS Team - [@kess0fficial](https://x.com/kess0fficial)  
-Project Link: [https://kess0fficial.github.io/kess0fficial/](https://kess0fficial.github.io/kess0fficial/)
+Project Link: [http://kessofficialweb.github.io/kessofficial/](http://kessofficialweb.github.io/kessofficial/)
