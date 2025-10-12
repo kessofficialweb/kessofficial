@@ -748,3 +748,134 @@ document.querySelector('.back-to-top').addEventListener('click', function(e) {
 
 
 
+// dinner-script.js
+document.addEventListener('DOMContentLoaded', function() {
+    // Gallery image modal functionality
+    const galleryImages = document.querySelectorAll('.gallery-image');
+    
+    galleryImages.forEach(image => {
+        image.addEventListener('click', function() {
+            // Create modal for image viewing
+            const modal = document.createElement('div');
+            modal.style.position = 'fixed';
+            modal.style.top = '0';
+            modal.style.left = '0';
+            modal.style.width = '100%';
+            modal.style.height = '100%';
+            modal.style.backgroundColor = 'rgba(0,0,0,0.8)';
+            modal.style.display = 'flex';
+            modal.style.justifyContent = 'center';
+            modal.style.alignItems = 'center';
+            modal.style.zIndex = '1000';
+            modal.style.cursor = 'pointer';
+            
+            const modalImg = document.createElement('img');
+            modalImg.src = this.src;
+            modalImg.style.maxWidth = '90%';
+            modalImg.style.maxHeight = '90%';
+            modalImg.style.objectFit = 'contain';
+            modalImg.style.borderRadius = '8px';
+            modalImg.style.boxShadow = '0 4px 20px rgba(0,0,0,0.5)';
+            
+            modal.appendChild(modalImg);
+            document.body.appendChild(modal);
+            
+            // Close modal on click
+            modal.addEventListener('click', function() {
+                document.body.removeChild(modal);
+            });
+            
+            // Close modal on Escape key
+            document.addEventListener('keydown', function closeModal(e) {
+                if (e.key === 'Escape') {
+                    document.body.removeChild(modal);
+                    document.removeEventListener('keydown', closeModal);
+                }
+            });
+        });
+    });
+    
+    // Event interest button functionality
+    const interestButton = document.getElementById('eventInterest');
+    if (interestButton) {
+        interestButton.addEventListener('click', function() {
+            const userResponse = confirm('Thank you for your interest! We will notify you when registration opens for the Engineering Hackathon 2025.');
+            if (userResponse) {
+                this.textContent = 'Registered Interest!';
+                this.style.backgroundColor = '#27ae60';
+                this.disabled = true;
+                
+                // Here you would typically send this to a server
+                console.log('User expressed interest in future event');
+            }
+        });
+    }
+    
+    // Social share functionality
+    const socialButtons = document.querySelectorAll('.social-btn');
+    const pageUrl = encodeURIComponent(window.location.href);
+    const pageTitle = encodeURIComponent(document.title);
+    
+    socialButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const platform = this.getAttribute('data-platform');
+            let shareUrl = '';
+            
+            switch(platform) {
+                case 'twitter':
+                    shareUrl = `https://twitter.com/share?url=${pageUrl}&text=${pageTitle}`;
+                    break;
+                case 'facebook':
+                    shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`;
+                    break;
+                case 'linkedin':
+                    shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${pageUrl}`;
+                    break;
+            }
+            
+            if (shareUrl) {
+                window.open(shareUrl, '_blank', 'width=600,height=400');
+            }
+        });
+    });
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+    
+    // Add fade-in animation to elements as they scroll into view
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+    
+    // Observe elements for scroll animations
+    const animatedElements = document.querySelectorAll('.detail-item, .highlight-card, .menu-category, .testimonial');
+    animatedElements.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(el);
+    });
+    
+    console.log('Engineering Dinner blog post interactive features loaded successfully!');
+});
