@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Dinner Blog Post</title>
+    <link rel="stylesheet" href="dinner-styles.css">
+    <!-- Include if you're using Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <article class="blog-post">
+        <header class="post-header">
+            <div class="container">
+                <h1 class="post-title">Engineering Students Dinner: A Night of Connection and Cuisine</h1>
+                <div class="post-meta">
+                    <span class="date"><i class="far fa-calendar"></i> October 12, 2025</span>
+                    <span class="author"><i class="far fa-user"></i> Engineering Student Council</span>
+                    <span class="category"><i class="far fa-folder"></i> University Events</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="post-content container">
+            <div class="intro-section">
+                <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Engineering students gathered for dinner" class="featured-image">
+                <p class="intro-text">This month's Engineering Dinner brought together students and faculty for an evening of delicious food, engaging conversations, and valuable networking opportunities. The event highlighted the strong community within our engineering department.</p>
+            </div>
+
+            <section class="event-details">
+                <h2><i class="fas fa-info-circle"></i> Event Details</h2>
+                <div class="details-grid">
+                    <div class="detail-item">
+                        <h3>Date & Time</h3>
+                        <p>October 5, 2025<br>6:00 PM - 9:00 PM</p>
+                    </div>
+                    <div class="detail-item">
+                        <h3>Location</h3>
+                        <p>University Engineering Building<br>Grand Atrium</p>
+                    </div>
+                    <div class="detail-item">
+                        <h3>Attendees</h3>
+                        <p>150+ Engineering Students<br>Faculty Members<br>Industry Guests</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="menu-section">
+                <h2><i class="fas fa-utensils"></i> Dinner Menu</h2>
+                <div class="menu-container">
+                    <div class="menu-category">
+                        <h3>Main Courses</h3>
+                        <ul>
+                            <li>Herb-Roasted Chicken with Pan Juices</li>
+                            <li>Eggplant Parmesan (Vegetarian)</li>
+                            <li>Grilled Salmon with Lemon-Dill Sauce</li>
+                        </ul>
+                    </div>
+                    <div class="menu-category">
+                        <h3>Side Dishes</h3>
+                        <ul>
+                            <li>Garlic Mashed Potatoes</li>
+                            <li>Seasonal Roasted Vegetables</li>
+                            <li>Garden Fresh Salad</li>
+                        </ul>
+                    </div>
+                    <div class="menu-category">
+                        <h3>Desserts</h3>
+                        <ul>
+                            <li>Chocolate Lava Cake</li>
+                            <li>New York Cheesecake</li>
+                            <li>Fresh Fruit Platter</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="highlights">
+                <h2><i class="fas fa-star"></i> Event Highlights</h2>
+                <div class="highlights-grid">
+                    <div class="highlight-card">
+                        <div class="highlight-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Networking Session</h3>
+                        <p>Students connected with senior engineers and faculty members, discussing career paths and research opportunities.</p>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Project Showcase</h3>
+                        <p>Senior engineering students presented their capstone projects, inspiring underclassmen with innovative solutions.</p>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h3>Awards Ceremony</h3>
+                        <p>Outstanding students were recognized for their academic achievements and contributions to the engineering community.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="gallery-section">
+                <h2><i class="fas fa-camera"></i> Event Gallery</h2>
+                <div class="gallery-grid">
+                    <img src="https://images.unsplash.com/photo-1541336032412-2048a678540d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Students networking at the dinner" class="gallery-image">
+                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Dinner buffet setup" class="gallery-image">
+                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Award ceremony moment" class="gallery-image">
+                </div>
+            </section>
+
+            <section class="testimonials">
+                <h2><i class="fas fa-quote-left"></i> Student Impressions</h2>
+                <div class="testimonial-container">
+                    <div class="testimonial">
+                        <p>"The engineering dinner was an incredible opportunity to connect with professors outside the classroom. The conversations were inspiring!"</p>
+                        <span class="testimonial-author">- Sarah Chen, Computer Engineering</span>
+                    </div>
+                    <div class="testimonial">
+                        <p>"I loved seeing the project demonstrations while enjoying a great meal. It gave me ideas for my own senior project next year."</p>
+                        <span class="testimonial-author">- Marcus Johnson, Mechanical Engineering</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="future-events">
+                <h2><i class="fas fa-calendar-alt"></i> Upcoming Events</h2>
+                <p>Join us for our next engineering community event:</p>
+                <div class="event-card">
+                    <h3>Engineering Hackathon 2025</h3>
+                    <p><strong>Date:</strong> November 15-16, 2025</p>
+                    <p><strong>Theme:</strong> Sustainable Technology Solutions</p>
+                    <button class="cta-button" id="eventInterest">I'm Interested</button>
+                </div>
+            </section>
+        </div>
+
+        <footer class="post-footer">
+            <div class="container">
+                <div class="tags">
+                    <i class="fas fa-tags"></i>
+                    <span class="tag">engineering</span>
+                    <span class="tag">student-life</span>
+                    <span class="tag">networking</span>
+                    <span class="tag">university-events</span>
+                </div>
+                <div class="social-share">
+                    <h4>Share this post:</h4>
+                    <button class="social-btn" data-platform="twitter"><i class="fab fa-twitter"></i></button>
+                    <button class="social-btn" data-platform="facebook"><i class="fab fa-facebook-f"></i></button>
+                    <button class="social-btn" data-platform="linkedin"><i class="fab fa-linkedin-in"></i></button>
+                </div>
+            </div>
+        </footer>
+    </article>
+
+    <script src="dinner-script.js"></script>
+</body>
+</html>
